@@ -14,7 +14,7 @@ namespace forum_system.controller
     {
         private IModel model;
         private IView view;
-
+        
         public Forum(IView view, IModel model)
         {
             this.view = view;
@@ -32,16 +32,32 @@ namespace forum_system.controller
             return model.getAllSubForums();
         }
 
-        public ForumMember login(string userName, string password)
-        {
-            return model.login( userName, password);
-        }
-
+        //if contain return true
         public void notifyUser(string message)
         {
             view.notifyUser(message);
         }
+        public bool Contain(string name)
+        {
+            List<SubForum> subForumList= getSubForums();
+            foreach (var SubForum in subForumList)
+            {
+                if (SubForum.name== name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
-        
+        void IController.notifyUser(string message)
+        {
+            throw new NotImplementedException();
+        }
+
+        List<string> IController.getSubForums()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

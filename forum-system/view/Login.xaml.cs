@@ -1,4 +1,6 @@
-﻿using System;
+﻿using forum_system.controller;
+using forum_system.model.forum_components;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,11 +21,40 @@ namespace forum_system.view
     /// </summary>
     public partial class Login : Window
     {
-        Window mainWindow;
-        public Login(Window window)
+        IController controller;
+        public Login(IController controller)
         {
             InitializeComponent();
-            mainWindow = window;
+            this.controller = controller;
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            if (username.Text!="" || password.Text!="")
+            {
+                try
+                {
+                  //  ForumMember fm = controller.login(username.Text, password.Text);//add soon
+                   // if (fm==null)
+                    //{
+                      //  MessageBox.Show("rejected");
+
+//                    }
+                    //controller.user = fm;//addsoon
+                    MessageBox.Show("Log in successfully");
+                   // ((MainWindow)Application.Current.MainWindow).notifyMe(user);//change and add
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("unvalid input");
+
+            }
         }
     }
 }

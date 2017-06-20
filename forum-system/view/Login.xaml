@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="Login" Height="300" Width="300">
     <Grid>
-        <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Height="40" Margin="86,166,0,0" VerticalAlignment="Top" Width="129" FontWeight="Bold" FontSize="22"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="25" Margin="67,109,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="178" TextAlignment="Center"/>
-        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="25" Margin="67,55,0,0" TextWrapping="Wrap" Text="user name" VerticalAlignment="Top" Width="178" TextAlignment="Center"/>
+        <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Height="40" Margin="86,166,0,0" VerticalAlignment="Top" Width="129" FontWeight="Bold" FontSize="22" Click="button_Click"/>
+        <TextBox x:Name="password" HorizontalAlignment="Left" Height="25" Margin="67,109,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="178" TextAlignment="Center"/>
+        <TextBox x:Name="username" HorizontalAlignment="Left" Height="25" Margin="67,55,0,0" TextWrapping="Wrap" Text="user name" VerticalAlignment="Top" Width="178" TextAlignment="Center"/>
 
     </Grid>
 </Window>

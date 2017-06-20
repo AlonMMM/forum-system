@@ -13,6 +13,10 @@ namespace forum_system.controller
 
         List<SubForum> getSubForums();
 
+        List<Discussion> getDiscussions(string subForumName);      
+        
+        
+        bool Contain(string name);
         List<Discussion> getDiscussions(string subForumName);
 
         ForumMember login(string userName, string password);

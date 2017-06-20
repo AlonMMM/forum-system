@@ -28,7 +28,7 @@ namespace forum_system.view
         {
             InitializeComponent();
             this.controller = controller;
-            sub_forum_list = controller.getSubForums();
+            sub_forum_list = this.controller.getSubForums();
         }
 
         private void goToForum_Click(object sender, RoutedEventArgs e)
@@ -44,8 +44,8 @@ namespace forum_system.view
 
         private void button_Click(object sender, RoutedEventArgs e)
         {                     
-            SubForumWindow createGroup = new SubForumWindow(controller, sub_forum_options.Text);
-            createGroup.ShowDialog();
+            SubForumWindow subForumWindow = new SubForumWindow(controller, sub_forum_options.Text);
+            subForumWindow.ShowDialog();
         }
 
         private void subForumLoaded(object sender, RoutedEventArgs e)
@@ -53,6 +53,11 @@ namespace forum_system.view
             var comboBox = sender as ComboBox;
             comboBox.ItemsSource = sub_forum_list;
             comboBox.SelectedIndex = 0;
+        }
+
+        private void addNewForum(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

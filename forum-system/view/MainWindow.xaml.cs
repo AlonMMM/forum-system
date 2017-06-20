@@ -43,7 +43,7 @@ namespace forum_system
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            Login loginWindow = new view.Login(this);
+            Login loginWindow = new view.Login(controller);
             loginWindow.Show();
             this.Close();
         }
