@@ -1,4 +1,5 @@
-﻿using System;
+﻿using forum_system.controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,9 +18,9 @@ namespace forum_system.view
     /// <summary>
     /// Interaction logic for SubForum.xaml
     /// </summary>
-    public partial class SubForum : Window
+    public partial class SubForumWindow : Window
     {
-        public SubForum()
+        public SubForumWindow(IController controller,string subForumName)
         {
             InitializeComponent();
         }

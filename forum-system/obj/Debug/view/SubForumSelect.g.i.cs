@@ -101,6 +101,12 @@ namespace forum_system.view {
             this.sub_forum_options = ((System.Windows.Controls.ComboBox)(target));
             
             #line 11 "..\..\..\view\SubForumSelect.xaml"
+            this.sub_forum_options.Loaded += new System.Windows.RoutedEventHandler(this.subForumLoaded);
+            
+            #line default
+            #line hidden
+            
+            #line 11 "..\..\..\view\SubForumSelect.xaml"
             this.sub_forum_options.SelectionChanged += new System.Windows.Controls.SelectionChangedEventHandler(this.comboBox_SelectionChanged);
             
             #line default
