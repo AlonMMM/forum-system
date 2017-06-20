@@ -26,9 +26,22 @@ namespace forum_system.model
 
         public OleDbDataReader select(string query)
         {
-            OleDbCommand cmd = new OleDbCommand(query, this.conn);
-            OleDbDataReader reader = cmd.ExecuteReader();
-            return reader;
+            try
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, this.conn);
+                OleDbDataReader reader = cmd.ExecuteReader();
+                return reader;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            
            
         }
 
