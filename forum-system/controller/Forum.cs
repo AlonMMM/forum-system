@@ -14,7 +14,7 @@ namespace forum_system.controller
     {
         private IModel model;
         private IView view;
-
+        
         public Forum(IView view, IModel model)
         {
             this.view = view;
@@ -22,14 +22,39 @@ namespace forum_system.controller
             UserState.initializeState(view, model);
         }
 
-        public List<string> getSubForums()
+        public List<SubForum> getSubForums()
+        {
+            List<SubForum> subForumList;
+
+            throw new NotImplementedException();
+        }
+
+        //if contain return true
+        public void notifyUser(string message)
+        {
+            view.notifyUser(message);
+        }
+        public bool Contain(string name)
+        {
+            List<SubForum> subForumList= getSubForums();
+            foreach (var SubForum in subForumList)
+            {
+                if (SubForum.name== name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        void IController.notifyUser(string message)
         {
             throw new NotImplementedException();
         }
 
-        public void notifyUser(string message)
+        List<string> IController.getSubForums()
         {
-            view.notifyUser(message);
+            throw new NotImplementedException();
         }
     }
 }
