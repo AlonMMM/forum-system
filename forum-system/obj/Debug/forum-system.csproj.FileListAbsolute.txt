@@ -45,3 +45,6 @@ C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system.c
 F:\Apps\Git Respository\Forum-System\forum-system\forum-system\bin\Debug\forum-system.exe.config
 F:\Apps\Git Respository\Forum-System\forum-system\forum-system\obj\Debug\forum-system.exe
 F:\Apps\Git Respository\Forum-System\forum-system\forum-system\obj\Debug\forum-system.pdb
+F:\Apps\Git Respository\forum-system\forum-system\bin\Debug\forum-system.exe.config
+F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum-system.exe
+F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum-system.pdb
