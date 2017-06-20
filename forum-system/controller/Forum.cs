@@ -22,6 +22,11 @@ namespace forum_system.controller
             UserState.initializeState(view, model);
         }
 
+        public List<string> getSubForums()
+        {
+            throw new NotImplementedException();
+        }
+
         public void notifyUser(string message)
         {
             view.notifyUser(message);
