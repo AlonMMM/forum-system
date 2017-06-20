@@ -19,7 +19,7 @@ namespace forum_system.model
         public List<SubForum> getAllSubForums()
         {
             List<SubForum> subForums = new List<SubForum>();
-            string query = "SELECT sub_forum_name FROM sub_forum_table";
+            string query = "SELECT * FROM sub_forum_table";
             OleDbDataReader reader = _dbUtils.select(query);
             while (reader.Read())
             {
