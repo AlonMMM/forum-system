@@ -17,9 +17,9 @@ namespace forum_system.view
     /// <summary>
     /// Interaction logic for SubForum.xaml
     /// </summary>
-    public partial class SubForum : Window
+    public partial class SubForumWindow : Window
     {
-        public SubForum()
+        public SubForumWindow()
         {
             InitializeComponent();
         }

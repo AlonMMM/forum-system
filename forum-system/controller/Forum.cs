@@ -22,6 +22,11 @@ namespace forum_system.controller
             UserState.initializeState(view, model);
         }
 
+        public List<Discussion> getDiscussions(string subForumName)
+        {
+            return model.getAllDiscussions(subForumName);
+        }
+
         public List<SubForum> getSubForums()
         {
             return model.getAllSubForums();

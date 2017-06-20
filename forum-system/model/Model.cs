@@ -34,6 +34,9 @@ namespace forum_system.model
             return _dbService.addDiscussion(discussion);
         }
 
-        
+        public List<Discussion> getAllDiscussions(string subForumName)
+        {
+            _dbService.getAllSubForums(subForumName);
+        }
     }
 }

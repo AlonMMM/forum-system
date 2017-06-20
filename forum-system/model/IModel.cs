@@ -15,5 +15,7 @@ namespace forum_system.model
         List<SubForum> getAllSubForums();
 
         void startDiscussion(Message message);
+
+        List<Discussion> getAllDiscussions(string subForumName);
     }
 }

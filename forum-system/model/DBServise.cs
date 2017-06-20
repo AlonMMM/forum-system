@@ -39,5 +39,10 @@ namespace forum_system.model
             _dbUtils.insert(query);
             return ans;
         }
+
+        internal void getAllSubForums(string subForumName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
