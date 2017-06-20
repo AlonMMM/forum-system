@@ -12,8 +12,10 @@ namespace forum_system.model
     {
         void setController(IController controller);
 
-        List<string> getAllSubForums();
+        List<SubForum> getAllSubForums();
 
         void startDiscussion(Message message);
+
+        List<Discussion> getAllDiscussions(string subForumName);
     }
 }

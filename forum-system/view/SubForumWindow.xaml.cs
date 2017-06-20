@@ -1,5 +1,4 @@
-﻿using forum_system.controller;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +19,7 @@ namespace forum_system.view
     /// </summary>
     public partial class SubForumWindow : Window
     {
-        public SubForumWindow(IController controller,string subForumName)
+        public SubForumWindow()
         {
             InitializeComponent();
         }

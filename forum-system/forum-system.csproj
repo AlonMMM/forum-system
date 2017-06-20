@@ -55,15 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="view\AddSubForum.xaml.cs">
+      <DependentUpon>AddSubForum.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\IView.cs" />
     <Compile Include="view\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="view\SubForumWindow.xaml.cs">
-      <DependentUpon>SubForumWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\SubForumSelect.xaml.cs">
       <DependentUpon>SubForumSelect.xaml</DependentUpon>
@@ -78,15 +78,15 @@
     <Compile Include="controller\states\BannedState.cs" />
     <Compile Include="controller\states\NotActiveState.cs" />
     <Compile Include="controller\states\UserState.cs" />
+    <Page Include="view\AddSubForum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="view\Login.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="view\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="view\SubForumWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
