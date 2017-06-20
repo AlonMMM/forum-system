@@ -59,3 +59,5 @@ D:\Git\forum-system\forum-system\obj\Debug\forum-system_MarkupCompile.cache
 D:\Git\forum-system\forum-system\obj\Debug\forum-system_MarkupCompile.lref
 D:\Git\forum-system\forum-system\obj\Debug\forum-system.exe
 D:\Git\forum-system\forum-system\obj\Debug\forum-system.pdb
+D:\Git\forum-system\forum-system\bin\Debug\forum-system.exe.config
+D:\Git\forum-system\forum-system\obj\Debug\view\SubForumWindow.g.cs
