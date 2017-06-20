@@ -10,5 +10,9 @@ namespace forum_system.controller
     public interface IController
     {
         void notifyUser(string message);
+
+        List<string> getSubForums();
     }
+
+    
 }
