@@ -1,4 +1,5 @@
 ﻿using forum_system.controller;
+using forum_system.model.forum_components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,16 +19,16 @@ namespace forum_system.view
     /// <summary>
     /// Interaction logic for SubForumSelect.xaml
     /// </summary>
-    public partial class SubForumSelect : Window
+    public partial class SubForumWindow : Window
     {
         IController controller;
-        List<string> sub_forum_list;
+        List<SubForum> sub_forum_list;
 
-        public SubForumSelect(IController controller)
+        public SubForumWindow(IController controller)
         {
             InitializeComponent();
             this.controller = controller;
-            sub_forum_list = controller.getSubForums();
+            sub_forum_list = this.controller.getSubForums();
         }
 
         private void goToForum_Click(object sender, RoutedEventArgs e)

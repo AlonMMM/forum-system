@@ -38,7 +38,7 @@ namespace forum_system.view {
     /// <summary>
     /// SubForumSelect
     /// </summary>
-    public partial class SubForumSelect : System.Windows.Window, System.Windows.Markup.IComponentConnector {
+    public partial class SubForumWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
         #line 10 "..\..\..\view\SubForumSelect.xaml"
