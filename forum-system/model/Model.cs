@@ -36,7 +36,13 @@ namespace forum_system.model
 
         public List<Discussion> getAllDiscussions(string subForumName)
         {
-            _dbService.getAllSubForums(subForumName);
+            return _dbService.getAllSubForums(subForumName);
+        }
+
+
+        public ForumMember login(string userName, string password)
+        {
+            throw new NotImplementedException();
         }
     }
 }

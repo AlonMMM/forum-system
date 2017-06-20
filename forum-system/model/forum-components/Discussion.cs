@@ -10,11 +10,14 @@ namespace forum_system.model.forum_components
     {
         private string _subForum;
         private int _discussionID;
+
         private Message message;
 
-        public Discussion(Message message)
+        public Discussion(Message message,string subForumName)
         {
             this.message = message;
+            _discussionID = message.ID;
+            _subForum = subForumName;
         }
 
         public int DiscussionID()

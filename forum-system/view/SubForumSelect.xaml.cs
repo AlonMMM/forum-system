@@ -1,4 +1,5 @@
 ﻿using forum_system.controller;
+using forum_system.model.forum_components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace forum_system.view
     public partial class SubForumSelect : Window
     {
         IController controller;
-        List<string> sub_forum_list;
+        List<SubForum> sub_forum_list;
 
         public SubForumSelect(IController controller)
         {

@@ -8,16 +8,33 @@ namespace forum_system.model.forum_components
 {
     public class Message
     {
-        private string content;
+        private int id;
+        private string creator;
         private string title;
+        private string content;
+        private string date;
         private int repliedToId;
 
-        public Message(string content, string title, int repliedToId)
+        public Message(string creator,string content, string title,string date, int repliedToId)
         {
-            this.content = content;
+            this.creator = creator;
             this.title = title;
+            this.content = content;
+            this.date = date;
             this.RepliedToId = repliedToId;
         }
+
+        public Message(int id ,string creator, string content, string title, string date, int repliedToId)
+        {
+            this.id = id;
+            this.creator = creator;
+            this.title = title;
+            this.content = content;
+            this.date = date;
+            this.RepliedToId = repliedToId;
+        }
+
+
 
         public string Content
         {
@@ -56,6 +73,10 @@ namespace forum_system.model.forum_components
             {
                 repliedToId = value;
             }
+        }
+
+        public int ID {
+            get { return this.id; }
         }
     }
 }

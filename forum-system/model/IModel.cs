@@ -17,5 +17,7 @@ namespace forum_system.model
         void startDiscussion(Message message);
 
         List<Discussion> getAllDiscussions(string subForumName);
+
+        ForumMember login(string userName, string password);
     }
 }

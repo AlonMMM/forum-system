@@ -53,10 +53,10 @@ namespace forum_system
             MessageBox.Show("Not implemented.");
         }
 
-        private void startDiscussion(string content, string title, int repliedToId)
+        private void startDiscussion(string creator, string content, string title, string date, int repliedToId)
         {
-            Message message = new Message(content, title, repliedToId);
-            loggedInMember.startDiscussion(message);                
+            Message message = new Message( creator, content, title, date, repliedToId);
+            loggedInMember.startDiscussion(message);
         }
 
 

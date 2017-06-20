@@ -35,14 +35,44 @@ namespace forum_system.model
             bool ans = false;
             string subForum = discussion.SubForum();
             int disID = discussion.DiscussionID();
-            string query = "INSERT INTO discussion_table(openning_message_id, sub_forum_id) VALUES(" + "'" + disID + "', " + "'" + subForum + "')";
+            string query = "INSERT INTO discussion_table(openning_message_id, sub_forum_name) VALUES(" + "'" + disID + "', " + "'" + subForum + "')";
             _dbUtils.insert(query);
             return ans;
         }
 
-        internal void getAllSubForums(string subForumName)
+        public List<Discussion> getAllSubForums(string subForumName)
         {
-            throw new NotImplementedException();
+            List<Discussion> discussons = new List<Discussion>();
+            //first get all recored that match
+            string query = "SELECT * FROM discussion_table WHERE sub_forum_id = "+"'"+subForumName+"'";
+            OleDbDataReader reader = _dbUtils.select(query);
+            while (reader.Read())
+            {
+                //now we need to build message from id
+                int messageID = reader.GetInt32(0);
+                Message msg = getMessageByID(messageID);
+                discussons.Add(new Discussion(msg,subForumName));
+            }
+            return discussons;
+        }
+
+        private Message getMessageByID(int messageID)
+        {
+            string query = "SELECT * FROM message_table WHERE message_id = " + "'" + messageID + "'";
+            OleDbDataReader reader = _dbUtils.select(query);
+            Message msg = null;
+            while (reader.Read())
+            {
+                //now we need to build message from id
+                string creatorUser = reader.GetString(1);
+                string title = reader.GetString(2);
+                string content = reader.GetString(3);
+                string date = reader.GetString(4);
+                int repliedID = reader.GetInt32(5);
+                msg = new Message(messageID, creatorUser, title, content, date, repliedID);
+            }
+
+            return msg;
         }
     }
 }

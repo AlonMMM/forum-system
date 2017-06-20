@@ -15,7 +15,7 @@ namespace forum_system.controller
 
         List<Discussion> getDiscussions(string subForumName);
 
-       
+        ForumMember login(string userName, string password);
         
     }
 

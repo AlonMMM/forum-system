@@ -32,6 +32,11 @@ namespace forum_system.controller
             return model.getAllSubForums();
         }
 
+        public ForumMember login(string userName, string password)
+        {
+            return model.login( userName, password);
+        }
+
         public void notifyUser(string message)
         {
             view.notifyUser(message);
