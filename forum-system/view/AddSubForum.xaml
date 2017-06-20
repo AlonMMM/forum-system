@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AddSubForum" Height="300" Width="300">
     <Grid>
-        <TextBox x:Name="descruption" HorizontalAlignment="Left" Height="124" Margin="38,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" TextChanged="textBox_TextChanged" Text="Description&#xD;&#xA;" TextAlignment="Center"/>
+        <TextBox x:Name="Description" HorizontalAlignment="Left" Height="124" Margin="38,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" TextChanged="textBox_TextChanged" Text="Description&#xD;&#xA;" TextAlignment="Center"/>
         <TextBox x:Name="name" HorizontalAlignment="Left" Height="28" Margin="38,42,0,0" TextWrapping="Wrap" Text="sun-forum name" VerticalAlignment="Top" Width="217" TextAlignment="Center" TextChanged="textBox1_TextChanged"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="32" Margin="59,5,0,0" TextWrapping="Wrap" Text="open New sub-forum" VerticalAlignment="Top" Width="172" FontSize="18"/>
         <Button x:Name="create" Content="Create" HorizontalAlignment="Left" Height="28" Margin="103,231,0,0" VerticalAlignment="Top" Width="88" Click="CreateSubForum"/>
