@@ -1,4 +1,4 @@
-﻿<Window x:Class="forum_system.view.SubForumWindow"
+﻿<Window x:Class="forum_system.view.SubForumSelect"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,8 +8,8 @@
         Title="SubForumSelect" Height="500" Width="500">
     <Grid>
         <TextBlock x:Name="header" HorizontalAlignment="Left" Height="37" Margin="111,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" TextAlignment="Center"><Run FontWeight="Bold" FontSize="18" Text="Select sub-forum"/><LineBreak/><Run/></TextBlock>
-        <ComboBox x:Name="sub_forum_options" HorizontalAlignment="Left" Height="60" Margin="78,114,0,0" VerticalAlignment="Top" Width="325" Loaded="subForumLoaded" SelectionChanged="comboBox_SelectionChanged"/>
-        <Button x:Name="choose_sub_forum" Content="Choose Sub-forum" HorizontalAlignment="Left" Height="34" Margin="138,236,0,0" VerticalAlignment="Top" Width="225" Click="button_Click"/>
-
+        <ComboBox x:Name="sub_forum_options" HorizontalAlignment="Left" Height="60" Margin="85,147,0,0" VerticalAlignment="Top" Width="325" Loaded="subForumLoaded" SelectionChanged="comboBox_SelectionChanged"/>
+        <Button x:Name="choose_sub_forum" Content="Choose Sub-forum" HorizontalAlignment="Left" Height="34" Margin="135,234,0,0" VerticalAlignment="Top" Width="225" Click="button_Click"/>
+        <Button x:Name="createNewSubForum" Content="Create new Sub-forum" HorizontalAlignment="Left" Height="34" Margin="135,0,0,91" VerticalAlignment="Bottom" Width="225" Click="addNewForum"/>
     </Grid>
 </Window>
