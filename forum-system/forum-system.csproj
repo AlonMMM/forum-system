@@ -78,6 +78,9 @@
     <Compile Include="controller\states\BannedState.cs" />
     <Compile Include="controller\states\NotActiveState.cs" />
     <Compile Include="controller\states\UserState.cs" />
+    <Compile Include="view\SubForumWindow.xaml.cs">
+      <DependentUpon>SubForumWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="view\AddSubForum.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -91,6 +94,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="view\SubForumSelect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="view\SubForumWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

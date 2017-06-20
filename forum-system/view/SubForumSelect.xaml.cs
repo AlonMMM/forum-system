@@ -19,12 +19,12 @@ namespace forum_system.view
     /// <summary>
     /// Interaction logic for SubForumSelect.xaml
     /// </summary>
-    public partial class SubForumWindow : Window
+    public partial class SubForumSelect : Window
     {
         IController controller;
         List<SubForum> sub_forum_list;
 
-        public SubForumWindow(IController controller)
+        public SubForumSelect(IController controller)
         {
             InitializeComponent();
             this.controller = controller;
@@ -44,7 +44,7 @@ namespace forum_system.view
 
         private void button_Click(object sender, RoutedEventArgs e)
         {                     
-            SubForumWindow createGroup = new SubForumWindow(controller, sub_forum_options.Text);
+            SubForumSelect createGroup = new SubForumSelect(controller, sub_forum_options.Text);
             createGroup.ShowDialog();
         }
 
