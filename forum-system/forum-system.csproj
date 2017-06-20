@@ -65,6 +65,9 @@
     <Compile Include="view\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\Messege.xaml.cs">
+      <DependentUpon>Messege.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\SubForumSelect.xaml.cs">
       <DependentUpon>SubForumSelect.xaml</DependentUpon>
     </Compile>
@@ -92,6 +95,10 @@
     <Page Include="view\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="view\Messege.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="view\SubForumSelect.xaml">
       <Generator>MSBuild:Compile</Generator>

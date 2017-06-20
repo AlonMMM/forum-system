@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\
+D:\Git\forum-system\forum-system\obj\Debug\
 forum_system
 none
 false
 DEBUG;TRACE
-C:\Users\windows\Source\Repos\forum-system\forum-system\App.xaml
-5-989894985
+D:\Git\forum-system\forum-system\App.xaml
+6-1780357864
 1361627708
-32-940299701
+33-915736744
 13738642453
-view\AddSubForum.xaml;view\Login.xaml;view\MainWindow.xaml;view\SubForumSelect.xaml;view\SubForumWindow.xaml;
+view\AddSubForum.xaml;view\Login.xaml;view\MainWindow.xaml;view\Messege.xaml;view\SubForumSelect.xaml;view\SubForumWindow.xaml;
 
-True
+False
 
