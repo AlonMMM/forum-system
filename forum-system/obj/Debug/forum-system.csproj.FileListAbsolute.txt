@@ -1,0 +1,44 @@
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\bin\Debug\forum-system.exe.config
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\forum-system.csprojResolveAssemblyReference.cache
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\view\Login.g.cs
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\view\SubForum.g.cs
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\view\SubForumSelect.g.cs
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\App.g.cs
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\forum-system_Content.g.cs
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\forum-system_MarkupCompile.cache
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\forum-system_MarkupCompile.lref
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\view\MainWindow.g.cs
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\bin\Debug\model\DataBase\forums.accdb
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\bin\Debug\forum-system.exe
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\bin\Debug\forum-system.pdb
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\view\Login.baml
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\view\MainWindow.baml
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\view\SubForum.baml
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\view\SubForumSelect.baml
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\forum-system.g.resources
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\forum_system.Properties.Resources.resources
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\forum-system.csproj.GenerateResource.Cache
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\forum-system.exe
+c:\users\windows\documents\visual studio 2015\Projects\forum-system\forum-system\obj\Debug\forum-system.pdb
+C:\Users\windows\Source\Repos\forum-system\forum-system\bin\Debug\forum-system.exe.config
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system.exe
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system.pdb
+C:\Users\windows\Source\Repos\forum-system\forum-system\bin\Debug\model\DataBase\forums.accdb
+C:\Users\windows\Source\Repos\forum-system\forum-system\bin\Debug\forum-system.exe
+C:\Users\windows\Source\Repos\forum-system\forum-system\bin\Debug\forum-system.pdb
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system.csprojResolveAssemblyReference.cache
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\Login.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\MainWindow.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForum.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForumSelect.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\App.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system_Content.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system_MarkupCompile.cache
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system_MarkupCompile.lref
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\Login.baml
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\MainWindow.baml
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForum.baml
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForumSelect.baml
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system.g.resources
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum_system.Properties.Resources.resources
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system.csproj.GenerateResource.Cache
