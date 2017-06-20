@@ -12,6 +12,7 @@ namespace forum_system.controller
         void notifyUser(string message);
 
         List<string> getSubForums();
+        bool Contain(string name);
     }
 
     

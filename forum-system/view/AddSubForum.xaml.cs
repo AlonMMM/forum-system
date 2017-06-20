@@ -34,7 +34,15 @@ namespace forum_system.view
 
         private void CreateSubForum(object sender, RoutedEventArgs e)
         {
-            if (controller.)
+            if (controller.Contain(name.Text))
+            {
+                MessageBox.Show("name already exists");
+               
+            }
+            else
+            {
+                controller.addSubForum(name.Text, descruption.Text);
+            }
         }
 
         private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
