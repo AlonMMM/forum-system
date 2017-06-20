@@ -10,26 +10,35 @@ namespace forum_system.model
     public class DBUtils
     {
         static readonly string localPath = System.IO.Path.GetDirectoryName(System.IO.Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()));
-        private static readonly string pathToDb = localPath + @"\Data\forums.accdb";
+        private static readonly string pathToDb = localPath + @"\model\database\forums.accdb";
         OleDbConnection conn;
 
         public DBUtils()
         {
-            string connectionString =
-            @"Provider=Microsoft.Jet.OLEDB.4.0;" +
-            @"Data Source="+pathToDb+"; " +
-            @"User Id=;Password=;";
-
+            string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + pathToDb + "; Persist Security Info=False";
             conn = new OleDbConnection(connectionString);
+            conn.Close();
 
         }
 
         public OleDbDataReader select(string query)
         {
-            OleDbCommand cmd = new OleDbCommand(query, this.conn);
-            OleDbDataReader reader = cmd.ExecuteReader();
-            return reader;
-           
+            try
+            {
+                conn.Open();
+                OleDbCommand cmd = new OleDbCommand(query, this.conn);
+                OleDbDataReader reader = cmd.ExecuteReader();
+                return reader;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            
         }
 
         public bool insert(string query)
