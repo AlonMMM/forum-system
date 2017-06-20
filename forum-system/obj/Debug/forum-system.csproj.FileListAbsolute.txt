@@ -29,6 +29,7 @@ C:\Users\windows\Source\Repos\forum-system\forum-system\bin\Debug\forum-system.p
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system.csprojResolveAssemblyReference.cache
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\Login.g.cs
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\MainWindow.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForum.g.cs
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForumSelect.g.cs
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\App.g.cs
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system_Content.g.cs
@@ -36,9 +37,11 @@ C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system_M
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system_MarkupCompile.lref
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\Login.baml
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\MainWindow.baml
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForum.baml
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForumSelect.baml
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system.g.resources
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum_system.Properties.Resources.resources
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system.csproj.GenerateResource.Cache
-C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForumWindow.g.cs
-C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForumWindow.baml
+F:\Apps\Git Respository\Forum-System\forum-system\forum-system\bin\Debug\forum-system.exe.config
+F:\Apps\Git Respository\Forum-System\forum-system\forum-system\obj\Debug\forum-system.exe
+F:\Apps\Git Respository\Forum-System\forum-system\forum-system\obj\Debug\forum-system.pdb

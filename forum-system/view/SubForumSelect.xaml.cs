@@ -1,4 +1,5 @@
-﻿using System;
+﻿using forum_system.controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,11 +20,14 @@ namespace forum_system.view
     /// </summary>
     public partial class SubForumSelect : Window
     {
+        IController controller;
+        List<string> sub_forum_list;
 
-
-        public SubForumSelect()
+        public SubForumSelect(IController controller)
         {
             InitializeComponent();
+            this.controller = controller;
+            sub_forum_list = controller.getSubForums();
         }
 
         private void goToForum_Click(object sender, RoutedEventArgs e)
@@ -33,12 +37,21 @@ namespace forum_system.view
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            var comboBox = sender as ComboBox;
+            comboBox.Text = comboBox.SelectedItem as string;
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
-        {
+        {                     
+            SubForumWindow createGroup = new SubForumWindow(controller, sub_forum_options.Text);
+            createGroup.ShowDialog();
+        }
 
+        private void subForumLoaded(object sender, RoutedEventArgs e)
+        {
+            var comboBox = sender as ComboBox;
+            comboBox.ItemsSource = sub_forum_list;
+            comboBox.SelectedIndex = 0;
         }
     }
 }

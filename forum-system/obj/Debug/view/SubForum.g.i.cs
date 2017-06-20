@@ -36,9 +36,9 @@ namespace forum_system.view {
     
     
     /// <summary>
-    /// SubForum
+    /// SubForumWindow
     /// </summary>
-    public partial class SubForum : System.Windows.Window, System.Windows.Markup.IComponentConnector {
+    public partial class SubForumWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         private bool _contentLoaded;
         
