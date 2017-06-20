@@ -42,3 +42,6 @@ C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForumS
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system.g.resources
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum_system.Properties.Resources.resources
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\forum-system.csproj.GenerateResource.Cache
+F:\Apps\Git Respository\Forum-System\forum-system\forum-system\bin\Debug\forum-system.exe.config
+F:\Apps\Git Respository\Forum-System\forum-system\forum-system\obj\Debug\forum-system.exe
+F:\Apps\Git Respository\Forum-System\forum-system\forum-system\obj\Debug\forum-system.pdb
