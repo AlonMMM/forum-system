@@ -34,14 +34,19 @@ namespace forum_system.view
             {
                 try
                 {
-                    ForumMember fm = controller.login(username.Text, password.Text);
-                    controller.user = fm;
-                    showMessage("Log in successfully");
-                   // ((MainWindow)Application.Current.MainWindow).notifyMe(user);
+                  //  ForumMember fm = controller.login(username.Text, password.Text);//add soon
+                   // if (fm==null)
+                    //{
+                      //  MessageBox.Show("rejected");
+
+//                    }
+                    //controller.user = fm;//addsoon
+                    MessageBox.Show("Log in successfully");
+                   // ((MainWindow)Application.Current.MainWindow).notifyMe(user);//change and add
                 }
                 catch (Exception ex)
                 {
-                    showMessage(ex.Message);
+                    MessageBox.Show(ex.Message);
                     return;
                 }
             }

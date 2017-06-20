@@ -41,7 +41,7 @@ namespace forum_system.view
             }
             else
             {
-                controller.addSubForum(name.Text, descruption.Text);
+              //  controller.addSubForum(name.Text, Description.Text);// add soon
             }
         }
 
