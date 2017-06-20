@@ -22,14 +22,16 @@ namespace forum_system.controller
             UserState.initializeState(view, model);
         }
 
-        public List<string> getSubForums()
+        public List<SubForum> getSubForums()
         {
-            throw new NotImplementedException();
+            return model.getAllSubForums();
         }
 
         public void notifyUser(string message)
         {
             view.notifyUser(message);
         }
+
+        
     }
 }

@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="model\DBServise.cs" />
     <Compile Include="view\IView.cs" />
     <Compile Include="view\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -62,8 +63,8 @@
     <Compile Include="view\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="view\SubForum.xaml.cs">
-      <DependentUpon>SubForum.xaml</DependentUpon>
+    <Compile Include="view\SubForumWindow.xaml.cs">
+      <DependentUpon>SubForumWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\SubForumSelect.xaml.cs">
       <DependentUpon>SubForumSelect.xaml</DependentUpon>
@@ -86,7 +87,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="view\SubForum.xaml">
+    <Page Include="view\SubForumWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

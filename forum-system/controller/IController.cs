@@ -11,7 +11,10 @@ namespace forum_system.controller
     {
         void notifyUser(string message);
 
-        List<string> getSubForums();
+        List<SubForum> getSubForums();
+
+       
+        
     }
 
     

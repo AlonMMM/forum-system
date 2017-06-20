@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\windows\Source\Repos\forum-system\forum-system\App.xaml
-41381274560
+41238148294
 1361627708
-31659626699
+321197889212
 13738642453
-view\Login.xaml;view\MainWindow.xaml;view\SubForum.xaml;view\SubForumSelect.xaml;
+view\Login.xaml;view\MainWindow.xaml;view\SubForumWindow.xaml;view\SubForumSelect.xaml;
 
 True
 

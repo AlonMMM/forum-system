@@ -11,7 +11,7 @@ namespace forum_system.model
     public class Model : IModel
     {
         IController controller;
-        DBUtils _db = new DBUtils();
+        DBServise _dbService = new DBServise();
 
         public void setController(IController controller)
         {
@@ -23,20 +23,17 @@ namespace forum_system.model
             throw new NotImplementedException();
         }
 
-        List<string> IModel.getAllSubForums()
+        public List<SubForum> getAllSubForums()
         {
-            throw new NotImplementedException();
+            return _dbService.getAllSubForums();
         }
 
         public bool addDiscussion(Discussion discussion)
         {
 
-            bool ans = false;
-            string subForum = discussion.SubForum();
-            int disID = discussion.DiscussionID();
-            string query = "INSERT INTO discussion_table(openning_message_id, sub_forum_id) VALUES(" + "'" + disID + "', " + "'" + subForum + "')";
-            _db.insert(query);
-            return ans;
+            return _dbService.addDiscussion(discussion);
         }
+
+        
     }
 }
