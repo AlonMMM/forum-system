@@ -17,7 +17,6 @@ namespace forum_system.controller
         
         
         bool Contain(string name);
-        List<Discussion> getDiscussions(string subForumName);
 
         ForumMember login(string userName, string password);
         

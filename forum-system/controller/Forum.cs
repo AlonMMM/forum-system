@@ -42,7 +42,7 @@ namespace forum_system.controller
             List<SubForum> subForumList= getSubForums();
             foreach (var SubForum in subForumList)
             {
-                if (SubForum.name== name)
+                if (SubForum.Name== name)
                 {
                     return true;
                 }
@@ -55,7 +55,7 @@ namespace forum_system.controller
             throw new NotImplementedException();
         }
 
-        List<string> IController.getSubForums()
+        public ForumMember login(string userName, string password)
         {
             throw new NotImplementedException();
         }
