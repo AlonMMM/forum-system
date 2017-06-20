@@ -22,11 +22,14 @@ namespace forum_system.controller
             UserState.initializeState(view, model);
         }
 
+        public List<Discussion> getDiscussions(string subForumName)
+        {
+            return model.getAllDiscussions(subForumName);
+        }
+
         public List<SubForum> getSubForums()
         {
-            List<SubForum> subForumList;
-
-            throw new NotImplementedException();
+            return model.getAllSubForums();
         }
 
         //if contain return true
