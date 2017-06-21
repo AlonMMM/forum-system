@@ -86,5 +86,10 @@ namespace forum_system.model
         {
             return _dbService.addSubForum(name, discription);
         }
+
+        public bool addDiscussionAndMessage(string title, string contentMessege)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
