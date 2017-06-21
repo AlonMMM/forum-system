@@ -22,7 +22,6 @@ namespace forum_system
     public partial class MainWindow : Window, IView
     {
         IController controller;
-        IMember loggedInMember;
 
         public MainWindow()
         {
@@ -56,8 +55,7 @@ namespace forum_system
 
         private void startDiscussion(string creator, string content, string title, string date, int repliedToId , int discussId)
         {
-            Message message = new Message( creator, content, title, date, repliedToId, discussId);
-            loggedInMember.startDiscussion(message);
+            Message message = new Message( creator, content, title, date, repliedToId, discussId);           
         }
 
 

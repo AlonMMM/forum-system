@@ -55,7 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="model\DBServise.cs" />
+    <Compile Include="model\DBService.cs" />
     <Compile Include="view\AddSubForum.xaml.cs">
       <DependentUpon>AddSubForum.xaml</DependentUpon>
     </Compile>
@@ -157,7 +157,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="model\DataBase\forums.accdb">
+    <Content Include="model\database\forums.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

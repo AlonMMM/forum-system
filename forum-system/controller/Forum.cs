@@ -14,7 +14,8 @@ namespace forum_system.controller
     {
         private IModel model;
         private IView view;
-        private ForumMember member;        
+        private IMember member;  
+              
         public Forum(IView view, IModel model)
         {
             this.view = view;
@@ -32,17 +33,18 @@ namespace forum_system.controller
             return model.getAllSubForums();
         }
 
-        //if contain return true
         public void notifyUser(string message)
         {
             view.notifyUser(message);
         }
+
+        //if contain return true
         public bool Contain(string name)
         {
-            List<SubForum> subForumList= getSubForums();
+            List<SubForum> subForumList = getSubForums();
             foreach (var SubForum in subForumList)
             {
-                if (SubForum.Name== name)
+                if (SubForum.Name == name)
                 {
                     return true;
                 }
@@ -50,15 +52,16 @@ namespace forum_system.controller
             return false;
         }
 
-        void IController.notifyUser(string message)
-        {
-            
-        }
-
-        public ForumMember login(string userName, string password)
+        public bool login(string userName, string password)
         {
             member = model.login(userName, password);
-            return member;
+            return member != null;
+        }
+
+        public bool adminLogin(string userName, string password)
+        {
+            member = model.adminLogin(userName, password);
+            return member != null;
         }
 
         public Message getRootMessage(int discussId)
@@ -68,8 +71,7 @@ namespace forum_system.controller
 
         public bool addSubForum(string name, string discription)
         {
-
-            return model.addSubForum( name,  discription);
+            return model.addSubForum(name,  discription);
         }
     }
 }

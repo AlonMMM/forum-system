@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace forum_system.model
 {
-    public class DBServise
+    public class DBService
     {
         DBUtils _dbUtils = new DBUtils();
 
-        public DBServise()
+        public DBService()
         {
         }
 
@@ -111,7 +111,6 @@ namespace forum_system.model
             OleDbDataReader reader = _dbUtils.select(query);
             while (reader.Read())
             {
-
                 //now we need to build message from id
                 string user_name = reader.GetString(0);
                 string first_name = reader.GetString(1);
@@ -120,8 +119,25 @@ namespace forum_system.model
 
                 member = new ForumMember(user_name, first_name, last_name,  password);
             }
-
             return member;
+        }
+
+        public Admin adminLogin(string username, string passworduser)
+        {
+            Admin admin = null;
+            string query = "SELECT * FROM admin_table WHERE user_name = '" + username + "' AND password ='" + passworduser + "'";
+            OleDbDataReader reader = _dbUtils.select(query);
+            while (reader.Read())
+            {
+                //now we need to build message from id
+                string user_name = reader.GetString(0);
+                string first_name = reader.GetString(1);
+                string last_name = reader.GetString(2);
+                string password = passworduser;
+
+                admin = new Admin(user_name, first_name, last_name, password);
+            }
+            return admin;
         }
 
     }

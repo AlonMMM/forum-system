@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace forum_system.model.forum_components
 {
-    interface IMember
+    public interface IMember
     {
         void startDiscussion(Message message);
+
+
     }
 }
