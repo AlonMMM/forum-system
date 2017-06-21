@@ -102,3 +102,5 @@ F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum_system.Propert
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum-system.csproj.GenerateResource.Cache
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\message.g.cs
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\message.baml
+F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\DiscussionWindow.g.cs
+F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\DiscussionWindow.baml

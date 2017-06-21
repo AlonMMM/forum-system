@@ -59,7 +59,7 @@ namespace forum_system.model
         {
             List<Message> messages = new List<Message>();
 
-            string query = "SELECT * FROM message_table WHERE discussion_id = " + "'" + discussId + "'";
+            string query = "SELECT * FROM message_table WHERE discussion_id = " + discussId;
             OleDbDataReader reader = _dbUtils.select(query);
             Message msg = null;
             while (reader.Read())
