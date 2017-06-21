@@ -28,12 +28,22 @@ namespace forum_system.view
         {
             InitializeComponent();
             this.controller = controller;
+            changeVisibility(controller.isAdminLoggedIn());
+
             sub_forum_list = new List<string>();            
             foreach (SubForum item in this.controller.getSubForums())
             {
                 sub_forum_list.Add(item.Name);
             }
 
+        }
+
+        private void changeVisibility(bool isAdmin)
+        {
+            if (isAdmin)
+                createNewSubForum.Visibility = Visibility.Visible;
+            else
+                createNewSubForum.Visibility = Visibility.Hidden;
         }
 
         private void goToForum_Click(object sender, RoutedEventArgs e)

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using forum_system.model.forum_components;
+using forum_system.model.exceptions;
 
 namespace forum_system.controller
 {
@@ -25,17 +26,65 @@ namespace forum_system.controller
 
         public List<Discussion> getDiscussions(string subForumName)
         {
-            return model.getAllDiscussions(subForumName);
+            try
+            {
+                return member.getAllDiscussions(subForumName);
+            }
+            catch (NoPremissionException e)
+            {
+                view.notifyUser(e.Message);
+                return null;              
+            }
         }
 
         public List<SubForum> getSubForums()
         {
-            return model.getAllSubForums();
+            try
+            {
+                return member.getAllSubForums();
+            }
+            catch (NoPremissionException e)
+            {
+                view.notifyUser(e.Message);
+                return null;
+            }
         }
 
-        public void notifyUser(string message)
+        public bool addSubForum(string name, string discription)
         {
-            view.notifyUser(message);
+            try
+            {
+                return member.addSubForum(name, discription);
+            }
+            catch (NoPremissionException e)
+            {
+                view.notifyUser(e.Message);
+                return false;
+            }
+        }
+
+        public Message getRootMessage(int discussId)
+        {
+            return model.getRootMessage(discussId);
+        }
+
+        public bool login(string userName, string password)
+        {
+            member = model.login(userName, password);
+            return member != null;
+        }
+
+        public bool adminLogin(string userName, string password)
+        {
+            member = model.adminLogin(userName, password);   
+            return member != null;
+        }
+
+        public bool isAdminLoggedIn()
+        {
+            if (member == null)
+                return false;
+            return member.isAdmin();
         }
 
         //if contain return true
@@ -52,26 +101,9 @@ namespace forum_system.controller
             return false;
         }
 
-        public bool login(string userName, string password)
+        public void notifyUser(string message)
         {
-            member = model.login(userName, password);
-            return member != null;
-        }
-
-        public bool adminLogin(string userName, string password)
-        {
-            member = model.adminLogin(userName, password);
-            return member != null;
-        }
-
-        public Message getRootMessage(int discussId)
-        {
-            return model.getRootMessage(discussId);
-        }
-
-        public bool addSubForum(string name, string discription)
-        {
-            return model.addSubForum(name,  discription);
+            view.notifyUser(message);
         }
        
 
