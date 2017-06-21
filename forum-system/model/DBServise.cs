@@ -27,9 +27,7 @@ namespace forum_system.model
             }
             return subForums;
         }
-
-
-
+        
         public bool addDiscussion(Discussion discussion)
         {
             bool ans = false;
@@ -54,6 +52,36 @@ namespace forum_system.model
                 discussons.Add(new Discussion(msg,subForumName));
             }
             return discussons;
+        }
+
+        //return all the messages for the discussion (not only the first level)
+        public List<Message> getAllMessages(int discussId)
+        {
+            List<Message> messages = new List<Message>();
+
+            string query = "SELECT * FROM message_table WHERE discussion_id = " + "'" + discussId + "'";
+            OleDbDataReader reader = _dbUtils.select(query);
+            Message msg = null;
+            while (reader.Read())
+            {
+                //now we need to build message from id
+                int messageID = reader.GetInt32(0);
+                string creatorUser = reader.GetString(1);
+                string title = reader.GetString(2);
+                string content = reader.GetString(3);
+                string date = reader.GetString(4);
+                int repliedID = reader.GetInt32(5);
+                msg = new Message(messageID, creatorUser, title, content, date, repliedID, discussId);
+                messages.Add(msg);
+            }
+
+            return messages;
+
+        }
+
+        internal bool addSubForum(string name, string discription)
+        {
+            throw new NotImplementedException();
         }
 
         private Message getMessageByID(int messageID)
