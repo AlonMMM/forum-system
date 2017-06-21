@@ -10,9 +10,23 @@ namespace forum_system.model.forum_components
 {
     public class ForumMember : IMember
     {
-        private UserState userState;
+        protected UserState userState;
+        protected string user_name;
+        protected string first_name;
+        protected string last_name;
+        protected string password;
 
-        public ForumMember(States state)
+        public ForumMember(string user_name, string first_name, string last_name, string password)
+        {
+            this.user_name = user_name;
+            this.first_name = first_name;
+            this.last_name = last_name;
+            this.password = password;
+
+            userState = new ActiveState();
+        }
+
+        protected void setState(States state)
         {
             if (state == States.ACTIVE)
                 userState = new ActiveState();

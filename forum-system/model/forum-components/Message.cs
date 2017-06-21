@@ -20,7 +20,7 @@ namespace forum_system.model.forum_components
 
         public List<Message> Replies
         {
-            get { return replies = new List<Message>(); }
+            get { return replies; }
         }
         
         public Message(string creator,string content, string title,string date, int repliedToId , int discussionId)
@@ -42,8 +42,12 @@ namespace forum_system.model.forum_components
             this.date = date;
             this.RepliedToId = repliedToId;
             this.discussionId = discussionId;
+            
         }
-
+        public void addToReplies(Message message)
+        {
+            this.replies.Add(message);
+        }
 
 
         public string Content

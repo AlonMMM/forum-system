@@ -11,7 +11,7 @@ namespace forum_system.model
     public class Model : IModel
     {
         IController controller;
-        DBServise _dbService = new DBServise();
+        DBService _dbService = new DBService();
 
         public void setController(IController controller)
         {
@@ -42,7 +42,12 @@ namespace forum_system.model
 
         public ForumMember login(string userName, string password)
         {
-            throw new NotImplementedException();
+            return _dbService.login(userName, password);
+        }
+
+        public Admin adminLogin(string userName, string password)
+        {
+            return _dbService.adminLogin(userName, password);
         }
 
         //return message with list in it and recursivly contain all the message of the discuss
@@ -70,7 +75,7 @@ namespace forum_system.model
                 {
                     //finde the father in list and add to his message list the son message
                     if (father.ID == son.RepliedToId)
-                        father.Replies.Add(son);
+                        father.addToReplies(son);
                 }
             }
 

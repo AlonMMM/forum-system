@@ -55,12 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="model\DBServise.cs" />
+    <Compile Include="model\DBService.cs" />
     <Compile Include="view\AddSubForum.xaml.cs">
       <DependentUpon>AddSubForum.xaml</DependentUpon>
     </Compile>
-    <Compile Include="view\addSubForumWindow.xaml.cs">
-      <DependentUpon>addSubForumWindow.xaml</DependentUpon>
+    <Compile Include="view\DiscussionWindow.xaml.cs">
+      <DependentUpon>DiscussionWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\IView.cs" />
     <Compile Include="view\Login.xaml.cs">
@@ -69,8 +69,8 @@
     <Compile Include="view\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="view\Messege.xaml.cs">
-      <DependentUpon>Messege.xaml</DependentUpon>
+    <Compile Include="view\message.xaml.cs">
+      <DependentUpon>message.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\SubForumSelect.xaml.cs">
       <DependentUpon>SubForumSelect.xaml</DependentUpon>
@@ -92,7 +92,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="view\addSubForumWindow.xaml">
+    <Page Include="view\DiscussionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,7 +104,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="view\Messege.xaml">
+    <Page Include="view\message.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -157,7 +157,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="model\DataBase\forums.accdb">
+    <Content Include="model\database\forums.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

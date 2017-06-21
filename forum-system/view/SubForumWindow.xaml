@@ -3,10 +3,24 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:forum_system.view"
+        xmlns:local="clr-namespace:forum_system.model.forum_components"
         mc:Ignorable="d"
-        Title="SubForumWindow" Height="300" Width="300">
+        Title="SubForumWindow" x:Name="UI" Height="300" Width="300">
     <Grid>
-        
+        <Label Content="Guides" Margin="22,0,126,247"></Label>
+        <Label Content="Discussions" Margin="116,-2,32,249"></Label>
+        <ListView x:Name="listViewGuides" Margin="10,25,216,117" >
+
+
+        </ListView>
+
+        <ListView x:Name="listViewDiscussions" Margin="81,25,0,0" MouseDoubleClick="listView_Discussions_MouseDoubleClick">
+
+
+        </ListView>
+        <Button Content="Add Guide" Height="23" VerticalAlignment="Bottom" Margin="0,0,216,77" Click="Button_Click"></Button>
     </Grid>
+
+
+
 </Window>

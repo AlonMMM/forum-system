@@ -21,45 +21,49 @@ namespace forum_system.view
     /// </summary>
     public partial class Login : Window
     {
-        IController controller;
+        private IController controller;
+
+
         public Login(IController controller)
         {
             InitializeComponent();
             this.controller = controller;
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void login_Click(object sender, RoutedEventArgs e)
         {
-//            if (username.Text!="" || password.Text!="")
-//            {
-//                try
-//                {
-//                  //  ForumMember fm = controller.login(username.Text, password.Text);//add soon
-//                   // if (fm==null)
-//                    //{
-//                      //  MessageBox.Show("rejected");
-
-////                    }
-//                    //controller.user = fm;//addsoon
-//                    MessageBox.Show("Log in successfully");
-//                   // ((MainWindow)Application.Current.MainWindow).notifyMe(user);//change and add
-//                }
-//                catch (Exception ex)
-//                {
-//                    MessageBox.Show(ex.Message);
-//                    return;
-//                }
-//            }
-            if(true)
+            if (password.Text == "" || username.Text == "")
             {
-                SubForumSelect subForumWindow = new SubForumSelect(controller);
-                subForumWindow.ShowDialog();
+                MessageBox.Show("invalid input");
             }
             else
             {
-                MessageBox.Show("unvalid input");
+                try
+                {
+                    bool logInSuccess;
+                    if (checkBox_admin.IsChecked == true)
+                        logInSuccess = controller.adminLogin(username.Text, password.Text);
+                    else
+                        logInSuccess = controller.login(username.Text, password.Text);
 
+                    if (logInSuccess == true)
+                    {
+                        MessageBox.Show("Log in successfully");
+                        SubForumSelect subForumWindow = new SubForumSelect(controller);
+                        subForumWindow.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bad username or password");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
             }
+
         }
     }
 }
