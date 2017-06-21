@@ -35,7 +35,7 @@ namespace forum_system.model
             bool ans = false;
             string subForum = discussion.SubForum();
             int disID = discussion.DiscussionID();
-            string query = "INSERT INTO discussion_table(openning_message_id, sub_forum_name) VALUES(" + "'" + disID + "', " + "'" + subForum + "')";
+            string query = "INSERT INTO discussion_table(openning_message_id, sub_forum_id) VALUES(" + "'" + disID + "', " + "'" + subForum + "')";
             _dbUtils.insert(query);
             return ans;
         }
@@ -69,7 +69,8 @@ namespace forum_system.model
                 string content = reader.GetString(3);
                 string date = reader.GetString(4);
                 int repliedID = reader.GetInt32(5);
-                msg = new Message(messageID, creatorUser, title, content, date, repliedID);
+                int discussId = reader.GetInt32(6);
+                msg = new Message(messageID, creatorUser, title, content, date, repliedID, discussId);
             }
 
             return msg;

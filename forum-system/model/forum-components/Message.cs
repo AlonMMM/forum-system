@@ -14,17 +14,19 @@ namespace forum_system.model.forum_components
         private string content;
         private string date;
         private int repliedToId;
+        private int discussionId;
 
-        public Message(string creator,string content, string title,string date, int repliedToId)
+        public Message(string creator,string content, string title,string date, int repliedToId , int discussionId)
         {
             this.creator = creator;
             this.title = title;
             this.content = content;
             this.date = date;
             this.RepliedToId = repliedToId;
+            this.discussionId = discussionId;
         }
 
-        public Message(int id ,string creator, string content, string title, string date, int repliedToId)
+        public Message(int id ,string creator, string content, string title, string date, int repliedToId , int discussionId)
         {
             this.id = id;
             this.creator = creator;
@@ -32,6 +34,7 @@ namespace forum_system.model.forum_components
             this.content = content;
             this.date = date;
             this.RepliedToId = repliedToId;
+            this.discussionId = discussionId;
         }
 
 

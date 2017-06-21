@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.OleDb;
 using System.Linq;
 using System.Text;
@@ -25,7 +26,7 @@ namespace forum_system.model
         {
             try
             {
-                conn.Open();
+                openConnection();
                 OleDbCommand cmd = new OleDbCommand(query, this.conn);
                 OleDbDataReader reader = cmd.ExecuteReader();
                 return reader;
@@ -46,7 +47,7 @@ namespace forum_system.model
             bool ans = false;
             try
             {
-                conn.Open();
+                openConnection();
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 OleDbDataReader reader = cmd.ExecuteReader();
             }
@@ -56,9 +57,18 @@ namespace forum_system.model
             }
             finally
             {
-                conn.Close();
+                
             }
             return ans;
+        }
+
+        private void openConnection()
+        {
+            if (conn.State != ConnectionState.Open)
+            {
+                conn.Close();
+                conn.Open();
+            }
         }
     }
 }
