@@ -60,6 +60,9 @@ namespace forum_system.view
             comboBox.SelectedIndex = 0;
         }
 
- 
+        private void addNewForum(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
