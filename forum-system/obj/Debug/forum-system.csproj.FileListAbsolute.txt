@@ -104,3 +104,32 @@ F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\message.g.cs
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\message.baml
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\DiscussionWindow.g.cs
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\DiscussionWindow.baml
+C:\projects\school\forum-system\forum-system\bin\Debug\model\database\forums.accdb
+C:\projects\school\forum-system\forum-system\bin\Debug\forum-system.exe.config
+C:\projects\school\forum-system\forum-system\bin\Debug\forum-system.exe
+C:\projects\school\forum-system\forum-system\bin\Debug\forum-system.pdb
+C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.csprojResolveAssemblyReference.cache
+C:\projects\school\forum-system\forum-system\obj\Debug\view\AddSubForum.g.cs
+C:\projects\school\forum-system\forum-system\obj\Debug\view\DiscussionWindow.g.cs
+C:\projects\school\forum-system\forum-system\obj\Debug\view\Login.g.cs
+C:\projects\school\forum-system\forum-system\obj\Debug\view\MainWindow.g.cs
+C:\projects\school\forum-system\forum-system\obj\Debug\view\message.g.cs
+C:\projects\school\forum-system\forum-system\obj\Debug\view\SubForumSelect.g.cs
+C:\projects\school\forum-system\forum-system\obj\Debug\view\SubForumWindow.g.cs
+C:\projects\school\forum-system\forum-system\obj\Debug\App.g.cs
+C:\projects\school\forum-system\forum-system\obj\Debug\forum-system_Content.g.cs
+C:\projects\school\forum-system\forum-system\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\projects\school\forum-system\forum-system\obj\Debug\forum-system_MarkupCompile.cache
+C:\projects\school\forum-system\forum-system\obj\Debug\forum-system_MarkupCompile.lref
+C:\projects\school\forum-system\forum-system\obj\Debug\view\AddSubForum.baml
+C:\projects\school\forum-system\forum-system\obj\Debug\view\DiscussionWindow.baml
+C:\projects\school\forum-system\forum-system\obj\Debug\view\Login.baml
+C:\projects\school\forum-system\forum-system\obj\Debug\view\MainWindow.baml
+C:\projects\school\forum-system\forum-system\obj\Debug\view\message.baml
+C:\projects\school\forum-system\forum-system\obj\Debug\view\SubForumSelect.baml
+C:\projects\school\forum-system\forum-system\obj\Debug\view\SubForumWindow.baml
+C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.g.resources
+C:\projects\school\forum-system\forum-system\obj\Debug\forum_system.Properties.Resources.resources
+C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.csproj.GenerateResource.Cache
+C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.exe
+C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.pdb
