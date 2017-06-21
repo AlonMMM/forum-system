@@ -55,6 +55,27 @@ namespace forum_system.model
             return ans;
         }
 
+        public bool update(string query)
+        {
+            bool ans = false;
+            try
+            {
+                openConnection();
+                OleDbCommand cmd = new OleDbCommand(query, conn);
+                OleDbDataReader reader = cmd.ExecuteReader();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+
+            return ans;
+        }
+
+
+
+
+
         private void openConnection()
         {
             if (conn.State != ConnectionState.Open)
