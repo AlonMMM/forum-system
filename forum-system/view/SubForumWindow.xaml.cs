@@ -41,9 +41,13 @@ namespace forum_system.view
             changeVisibility(controller.isAdminLoggedIn());
 
             discussionsList = controller.getDiscussions(subForumName);
-            foreach (Discussion item in discussionsList)
+
+            if (discussionsList != null)
             {
-                listViewDiscussions.Items.Add(item.DiscussionID());
+                foreach (Discussion item in discussionsList)
+                {
+                    listViewDiscussions.Items.Add(item.DiscussionID());
+                }
             }
         }
 

@@ -52,14 +52,15 @@ namespace forum_system.model.forum_components
             throw new NoPremissionException("Normal member cannot add sub-forums");
         }
 
-        protected void setState(States state)
+        public void setState(States state)
         {
-            if (state == States.ACTIVE)
+               if (state == States.ACTIVE)
                 userState = new ActiveState();
             else if (state == States.BANNED)
                 userState = new BannedState();
             else if (state == States.NOT_ACTIVE)
                 userState = new NotActiveState();
         }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using forum_system.model.states;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,8 @@ namespace forum_system.model.forum_components
         List<Discussion> getAllDiscussions(string subForumName);
 
         List<SubForum> getAllSubForums();
+
+        void setState(States state);
 
         bool addSubForum(string name, string discription);
 

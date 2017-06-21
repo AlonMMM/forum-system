@@ -129,7 +129,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\DBUtils.cs" />
-    <Compile Include="model\Discassion.cs" />
     <Compile Include="model\forum-components\members\Admin.cs" />
     <Compile Include="model\forum-components\Discussion.cs" />
     <Compile Include="model\forum-components\members\ForumMember.cs" />

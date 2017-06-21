@@ -10,6 +10,6 @@ namespace forum_system.model.exceptions
     {
         public NoPremissionException() { }
 
-        public NoPremissionException(string message) { }
+        public NoPremissionException(string message) : base(message) { }
     }
 }

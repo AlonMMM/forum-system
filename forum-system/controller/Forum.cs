@@ -76,7 +76,7 @@ namespace forum_system.controller
 
         public bool adminLogin(string userName, string password)
         {
-            member = model.adminLogin(userName, password);
+            member = model.adminLogin(userName, password);   
             return member != null;
         }
 
