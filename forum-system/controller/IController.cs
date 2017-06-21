@@ -25,6 +25,7 @@ namespace forum_system.controller
 
         bool addSubForum(string name , string discription);
 
+        void addDiscussion(string subForum, string title, string content);
     }
 
     

@@ -73,9 +73,13 @@ namespace forum_system.controller
         {
             return model.addSubForum(name,  discription);
         }
-        public bool addDiscussionAndMessage(string title,string contentMessege)
+       
+
+        public void addDiscussion(string subForum, string title, string content)
         {
-            return model.addDiscussionAndMessage(title, contentMessege);
+            DateTime localDate = DateTime.Now;
+            string date = localDate.ToString();
+            member.startDiscussion(new Message("", title,content, date, -1, -1),subForum);
         }
     }
 }

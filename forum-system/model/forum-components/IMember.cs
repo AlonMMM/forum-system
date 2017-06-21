@@ -8,7 +8,7 @@ namespace forum_system.model.forum_components
 {
     public interface IMember
     {
-        void startDiscussion(Message message);
+        void startDiscussion(Message message,string subForum);
 
 
     }
