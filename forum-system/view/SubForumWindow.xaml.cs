@@ -1,4 +1,5 @@
 ﻿using forum_system.controller;
+using forum_system.model.forum_components;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -22,10 +23,14 @@ namespace forum_system.view
     public partial class SubForumWindow : Window
     {
         IController controller;
+        List<Discussion> discussionsList;
+        string subForumName;
         public SubForumWindow(IController controller, string subForumName)
         {
             InitializeComponent();
             this.controller = controller;
+            this.subForumName = subForumName;
+            discussionsList = controller.getDiscussions(subForumName);
         }
 
         public TreeViewModel TreeModel
@@ -41,6 +46,11 @@ namespace forum_system.view
                 };
             }
         }
+        public Message createHierarchy(List<Message> messageList)
+        {
+
+            return null;
+        }
     }
 
     public class TreeViewModel
@@ -48,12 +58,13 @@ namespace forum_system.view
         public ObservableCollection<NodeMessage> Items { get; set; }
     }
 
+    public class NodeMessage
+    {
+        public string Id { get; set; }
+        public string Name { get; set; }
+        public ObservableCollection<NodeMessage> Children { get; set; }
+    }
     
 }
-public class NodeMessage
-{
-    public string Id { get; set; }
-    public string Name { get; set; }
-    public ObservableCollection<NodeMessage> Children { get; set; }
-}
+
 
