@@ -30,7 +30,7 @@ namespace forum_system.view
             set { singleMessage = value; }
         }
 
-        private List<MessageUserControl> messageUserControlReplies;
+        private List<MessageUserControl> messageUserControlReplies = new List<MessageUserControl>();
         public List<MessageUserControl> MessageUserControlReplies
         {
             get { return messageUserControlReplies; }
@@ -47,7 +47,6 @@ namespace forum_system.view
             {
                 MessageUserControlReplies.Add(new MessageUserControl(controller, item));
             }
-
         }
     }
 }

@@ -5,10 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:forum_system.view"
              mc:Ignorable="d" Width="300.45" Height="100">
-    <Canvas HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="300" Background="White">
+    <Canvas HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="300" Background="red">
         <Grid Height="100" Width="300">
-            <Label x:Name="label" Content="{Binding SingleMessage.Title}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="115,0,0,0" FontWeight="Bold" />
- 
+            <Label Content="stam"></Label>
+            <Label x:Name="label" Content="{Binding SingleMessage.Title}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="45,0,0,0" FontWeight="Bold" Width="80" />
+
 
         </Grid>
     </Canvas>
