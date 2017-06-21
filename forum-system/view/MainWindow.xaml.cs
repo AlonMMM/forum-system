@@ -27,6 +27,7 @@ namespace forum_system
         public MainWindow()
         {
             InitializeComponent();
+            startMVC();
         }
 
         public void notifyUser(string message)

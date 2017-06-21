@@ -39,7 +39,7 @@ namespace forum_system.model
             {
                 
             }
-            
+
         }
 
         public bool insert(string query)
