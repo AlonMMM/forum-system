@@ -70,5 +70,9 @@ namespace forum_system.controller
 
             return model.addSubForum( name,  discription);
         }
+        public bool addDiscussionAndMessage(string title,string contentMessege)
+        {
+            return model.addDiscussionAndMessage(title, contentMessege);
+        }
     }
 }
