@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace forum_system.model
 {
-    public class DBServise
+    public class DBService
     {
         DBUtils _dbUtils = new DBUtils();
 
-        public DBServise()
+        public DBService()
         {
         }
 
@@ -59,7 +59,7 @@ namespace forum_system.model
         {
             List<Message> messages = new List<Message>();
 
-            string query = "SELECT * FROM message_table WHERE discussion_id = " + "'" + discussId + "'";
+            string query = "SELECT * FROM message_table WHERE discussion_id = " + discussId;
             OleDbDataReader reader = _dbUtils.select(query);
             Message msg = null;
             while (reader.Read())
@@ -111,7 +111,6 @@ namespace forum_system.model
             OleDbDataReader reader = _dbUtils.select(query);
             while (reader.Read())
             {
-
                 //now we need to build message from id
                 string user_name = reader.GetString(0);
                 string first_name = reader.GetString(1);
@@ -120,54 +119,26 @@ namespace forum_system.model
 
                 member = new ForumMember(user_name, first_name, last_name,  password);
             }
-
             return member;
         }
 
-        public bool addDiscussionAndMessage(string subForum, string creator_userName, string title, string content, string replied_to_id, string date)
+        public Admin adminLogin(string username, string passworduser)
         {
-            bool b = true;
-            string id = addFirstMessage( creator_userName,  title,  content,  replied_to_id,  date);
-            if (id!="")
+            Admin admin = null;
+            string query = "SELECT * FROM admin_table WHERE user_name = '" + username + "' AND password ='" + passworduser + "'";
+            OleDbDataReader reader = _dbUtils.select(query);
+            while (reader.Read())
             {
-                addDiscussion(id, subForum);
-                updateMessegeDiscussion(id);
+                //now we need to build message from id
+                string user_name = reader.GetString(0);
+                string first_name = reader.GetString(1);
+                string last_name = reader.GetString(2);
+                string password = passworduser;
 
+                admin = new Admin(user_name, first_name, last_name, password);
             }
-            return b;
+            return admin;
         }
-
-        public string addFirstMessage(string creator_userName,string title,string content, string replied_to_id,string date)
-        {
-            string id="";
-            string query = "INSERT INTO message_table (creator_userName,title,content,date,replied_to_id,discution_id) VALUES(" + "'" + creator_userName + "', " + "'" + title + "',"+ content+"','"+ replied_to_id+"','"+ date+"','-1','-1'")";
-            if(_dbUtils.insert(query))
-            {
-                string query2 = "SELECT max(message_id) FROM message_table";
-                OleDbDataReader reader = _dbUtils.select(query2);
-
-                while (reader.Read())
-                {
-
-                    //now we need to build message from id
-                    id = reader.GetString(0);
-                    
-                }
-            }
-            return id;
-        }
-
-        public bool addDiscussion(string id, string subForum)
-        {
-            string query = "INSERT INTO discussion_table(openning_message_id, sub_forum) VALUES(" + "'" + id + "', " + "'" + subForum + "')";
-            return _dbUtils.insert(query);
-        }
-        public bool updateMessegeDiscussion(string id)
-        {
-            string query = " UPDATE message_table discution_id="+ id + "WHERE message_id ='"+ id + "' ";
-            return _dbUtils.update(query);
-        }
-
 
     }
 }

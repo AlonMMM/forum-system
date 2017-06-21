@@ -21,31 +21,41 @@ namespace forum_system.view
     /// </summary>
     public partial class Login : Window
     {
-        IController controller;
+        private IController controller;
+
+
         public Login(IController controller)
         {
             InitializeComponent();
             this.controller = controller;
         }
 
-        private void button_Click(object sender, RoutedEventArgs e)
+        private void login_Click(object sender, RoutedEventArgs e)
         {
             if (password.Text == "" || username.Text == "")
             {
-                MessageBox.Show("unvalid input");
+                MessageBox.Show("invalid input");
             }
             else
             {
                 try
                 {
-                    ForumMember member = controller.login(username.Text, password.Text);
-                    if (member!=null)
+                    bool logInSuccess;
+                    if (checkBox_admin.IsChecked == true)
+                        logInSuccess = controller.adminLogin(username.Text, password.Text);
+                    else
+                        logInSuccess = controller.login(username.Text, password.Text);
+
+                    if (logInSuccess == true)
                     {
                         MessageBox.Show("Log in successfully");
-                        
                         SubForumSelect subForumWindow = new SubForumSelect(controller);
                         subForumWindow.ShowDialog();
-                    }           
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bad username or password");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -53,7 +63,7 @@ namespace forum_system.view
                     return;
                 }
             }
-           
+
         }
     }
 }

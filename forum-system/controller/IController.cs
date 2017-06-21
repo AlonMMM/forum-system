@@ -15,15 +15,16 @@ namespace forum_system.controller
 
         List<Discussion> getDiscussions(string subForumName);      
         
-        
         bool Contain(string name);
 
-        ForumMember login(string userName, string password);
+        bool login(string userName, string password);
+
+        bool adminLogin(string userName, string password);
 
         Message getRootMessage(int discussId);
 
         bool addSubForum(string name , string discription);
-        
+
     }
 
     

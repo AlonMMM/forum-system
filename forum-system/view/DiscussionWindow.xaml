@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:forum_system.model.forum_components"
         mc:Ignorable="d"
         Title="DiscussionWindow" Height="300" Width="300">
-    <TreeView DataContext="{Binding ElementName=UI, Path=DiscussionList}" ItemsSource="{Binding Items}">
+    <TreeView Name="MessagesTree" ItemsSource="{Binding}">
         <TreeView.Resources>
-            <HierarchicalDataTemplate DataType="{x:Type local:Message}" ItemsSource="{Binding Children}">
-                <TextBlock Text="{Binding Name}"></TextBlock>
+            <HierarchicalDataTemplate DataType="{x:Type local:Message}" ItemsSource="{Binding Replies}">
+                <TextBlock Text="{Binding title}"></TextBlock>
             </HierarchicalDataTemplate>
         </TreeView.Resources>
     </TreeView>

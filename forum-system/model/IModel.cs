@@ -20,6 +20,8 @@ namespace forum_system.model
 
         ForumMember login(string userName, string password);
 
+        Admin adminLogin(string userName, string password);
+
         Message getRootMessage(int discussId);
 
         bool addSubForum(string name, string discription);
