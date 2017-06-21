@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:forum_system.view"
         mc:Ignorable="d"
         Title="SubForumWindow" Height="300" Width="300">
-    <Grid>
-        
-    </Grid>
+    <TreeView DataContext="{Binding ElementName=UI, Path=TreeModel}" ItemsSource="{Binding Items}">
+        <TreeView.Resources>
+            <HierarchicalDataTemplate DataType="{x:Type local:NodeMessage}" ItemsSource="{Binding Children}">
+                <TextBlock Text="{Binding Name}"></TextBlock>
+            </HierarchicalDataTemplate>
+        </TreeView.Resources>
+    </TreeView>
 </Window>

@@ -1,6 +1,7 @@
 ﻿using forum_system.controller;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,39 @@ namespace forum_system.view
     /// </summary>
     public partial class SubForumWindow : Window
     {
+        IController controller;
         public SubForumWindow(IController controller, string subForumName)
         {
             InitializeComponent();
+            this.controller = controller;
+        }
+
+        public TreeViewModel TreeModel
+        {
+            get
+            {
+                return new TreeViewModel
+                {
+                    Items = new ObservableCollection<NodeMessage>{
+                           new NodeMessage { Name = "Root", Children =  new ObservableCollection<NodeMessage> {
+                              new NodeMessage { Name = "Level1" ,  Children = new ObservableCollection<NodeMessage>{
+                                  new NodeMessage{ Name = "Level2"}}} } }}
+                };
+            }
         }
     }
+
+    public class TreeViewModel
+    {
+        public ObservableCollection<NodeMessage> Items { get; set; }
+    }
+
+    
 }
+public class NodeMessage
+{
+    public string Id { get; set; }
+    public string Name { get; set; }
+    public ObservableCollection<NodeMessage> Children { get; set; }
+}
+
