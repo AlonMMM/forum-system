@@ -85,7 +85,6 @@ F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum-system.csprojR
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\AddSubForum.g.cs
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\Login.g.cs
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\MainWindow.g.cs
-F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\Messege.g.cs
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\SubForumSelect.g.cs
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\SubForumWindow.g.cs
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\App.g.cs
@@ -96,9 +95,10 @@ F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum-system_MarkupC
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\AddSubForum.baml
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\Login.baml
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\MainWindow.baml
-F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\Messege.baml
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\SubForumSelect.baml
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\SubForumWindow.baml
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum-system.g.resources
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum_system.Properties.Resources.resources
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum-system.csproj.GenerateResource.Cache
+F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\message.g.cs
+F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\message.baml

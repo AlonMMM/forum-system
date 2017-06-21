@@ -42,7 +42,7 @@ namespace forum_system.view
                     if (member!=null)
                     {
                         MessageBox.Show("Log in successfully");
-                        Close();
+                        
                         SubForumSelect subForumWindow = new SubForumSelect(controller);
                         subForumWindow.ShowDialog();
                     }           

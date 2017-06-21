@@ -6,12 +6,19 @@
         xmlns:local="clr-namespace:forum_system.model.forum_components"
         mc:Ignorable="d"
         Title="SubForumWindow" x:Name="UI" Height="300" Width="300">
+    <Grid>
+        <Label Content="Guides" Margin="22,0,126,247"></Label>
+        <Label Content="Discussions" Margin="116,-2,32,249"></Label>
+        <ListView x:Name="listViewGuides" Margin="10,25,216,0" >
+
+
+        </ListView>
+        <ListView x:Name="listViewDiscussions" Margin="81,25,0,0" MouseDoubleClick="listView_Discussions_MouseDoubleClick">
+
+
+        </ListView>
+    </Grid>
+   
     
-    <TreeView DataContext="{Binding ElementName=UI, Path=DiscussionList}" ItemsSource="{Binding Items}">
-        <TreeView.Resources>
-            <HierarchicalDataTemplate DataType="{x:Type local:Message}" ItemsSource="{Binding Children}">
-                <TextBlock Text="{Binding Name}"></TextBlock>
-            </HierarchicalDataTemplate>
-        </TreeView.Resources>
-    </TreeView>
+
 </Window>

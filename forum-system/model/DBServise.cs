@@ -86,7 +86,7 @@ namespace forum_system.model
 
         private Message getMessageByID(int messageID)
         {
-            string query = "SELECT * FROM message_table WHERE message_id = " + "'" + messageID + "'";
+            string query = "SELECT * FROM message_table WHERE message_id = " + messageID;
             OleDbDataReader reader = _dbUtils.select(query);
             Message msg = null;
             while (reader.Read())
@@ -104,7 +104,7 @@ namespace forum_system.model
             return msg;
         }
 
-        private ForumMember login(string username,string passworduser )
+        public ForumMember login(string username,string passworduser )
         {
             ForumMember member = null;
             string query = "SELECT * FROM user_table WHERE user_name = '" + username+ "' AND password ='" + passworduser + "'";

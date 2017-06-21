@@ -39,9 +39,16 @@ namespace forum_system.view
             this.controller = controller;
             this.subForumName = subForumName;
             discussionsList = controller.getDiscussions(subForumName);
+            foreach (Discussion item in discussionsList)
+            {
+                listViewDiscussions.Items.Add(item.DiscussionID());
+            }
         }
 
-
+        private void listView_Discussions_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
     }
 
     public class TreeViewModel
