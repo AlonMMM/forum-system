@@ -19,6 +19,10 @@ namespace forum_system.controller
         bool Contain(string name);
 
         ForumMember login(string userName, string password);
+
+        Message getRootMessage(int discussId);
+
+        bool addSubForum(string name , string discription);
         
     }
 
