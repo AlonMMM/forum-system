@@ -28,7 +28,7 @@ namespace forum_system.view
         {
             if (titleBox.Text=="")
             {
-                MessageBox.Show("Please enter title to the message")
+                MessageBox.Show("Please enter title to the message");
             }
             else
             {
