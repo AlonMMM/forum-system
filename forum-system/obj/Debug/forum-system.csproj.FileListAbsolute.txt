@@ -132,3 +132,7 @@ C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.exe
 C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.pdb
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\MessageUserControl.g.cs
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\MessageUserControl.baml
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\addDiscussion.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\DiscussionWindow.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\MessageUserControl.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\GeneratedInternalTypeHelper.g.cs
