@@ -3,12 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:forum_system.view"
+        xmlns:local="clr-namespace:forum_system.model.forum_components"
         mc:Ignorable="d"
         Title="SubForumWindow" x:Name="UI" Height="300" Width="300">
-    <TreeView DataContext="{Binding ElementName=UI, Path=TreeModel}" ItemsSource="{Binding Items}">
+    
+    <TreeView DataContext="{Binding ElementName=UI, Path=DiscussionList}" ItemsSource="{Binding Items}">
         <TreeView.Resources>
-            <HierarchicalDataTemplate DataType="{x:Type local:NodeMessage}" ItemsSource="{Binding Children}">
+            <HierarchicalDataTemplate DataType="{x:Type local:Message}" ItemsSource="{Binding Children}">
                 <TextBlock Text="{Binding Name}"></TextBlock>
             </HierarchicalDataTemplate>
         </TreeView.Resources>

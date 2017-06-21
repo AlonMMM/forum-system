@@ -23,8 +23,15 @@ namespace forum_system.view
     public partial class SubForumWindow : Window
     {
         IController controller;
-        List<Discussion> discussionsList;
+        
         string subForumName;
+        private List<Discussion> discussionsList;
+
+        public List<Discussion> DiscussionList
+        {
+            get { return discussionsList; }           
+        }
+
         public SubForumWindow(IController controller, string subForumName)
         {
             InitializeComponent();
@@ -33,37 +40,21 @@ namespace forum_system.view
             discussionsList = controller.getDiscussions(subForumName);
         }
 
-        public TreeViewModel TreeModel
-        {
-            get
-            {
-                return new TreeViewModel
-                {
-                    Items = new ObservableCollection<NodeMessage>{
-                           new NodeMessage { Name = "Root", Children =  new ObservableCollection<NodeMessage> {
-                              new NodeMessage { Name = "Level1" ,  Children = new ObservableCollection<NodeMessage>{
-                                  new NodeMessage{ Name = "Level2"}}} } }}
-                };
-            }
-        }
-        public Message createHierarchy(List<Message> messageList)
-        {
 
-            return null;
-        }
     }
 
     public class TreeViewModel
     {
-        public ObservableCollection<NodeMessage> Items { get; set; }
+        private int myVar;
+
+        public int MyProperty
+        {
+            get { return myVar; }
+            set { myVar = value; }
+        }
+
     }
 
-    public class NodeMessage
-    {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public ObservableCollection<NodeMessage> Children { get; set; }
-    }
     
 }
 
