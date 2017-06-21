@@ -8,8 +8,10 @@
         Title="Login" Height="300" Width="300">
     <Grid>
         <Button x:Name="button" Content="Login" HorizontalAlignment="Left" Height="40" Margin="86,166,0,0" VerticalAlignment="Top" Width="129" FontWeight="Bold" FontSize="22" Click="button_Click"/>
-        <TextBox x:Name="password" HorizontalAlignment="Left" Height="25" Margin="67,109,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="178" TextAlignment="Center"/>
-        <TextBox x:Name="username" HorizontalAlignment="Left" Height="25" Margin="67,55,0,0" TextWrapping="Wrap" Text="user name" VerticalAlignment="Top" Width="178" TextAlignment="Center"/>
+        <TextBox x:Name="password" HorizontalAlignment="Left" Height="25" Margin="67,109,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="178" TextAlignment="Center"/>
+        <TextBox x:Name="username" HorizontalAlignment="Left" Height="25" Margin="67,55,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="178" TextAlignment="Center"/>
+        <Label x:Name="label" Content="password:" HorizontalAlignment="Left" Height="29" Margin="67,80,0,0" VerticalAlignment="Top" Width="178"/>
+        <Label x:Name="label_Copy" Content="user name:" HorizontalAlignment="Left" Height="29" Margin="67,26,0,0" VerticalAlignment="Top" Width="178" RenderTransformOrigin="0.513,-2.533"/>
 
     </Grid>
 </Window>

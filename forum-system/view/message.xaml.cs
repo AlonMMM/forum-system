@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace forum_system.view
 {
     /// <summary>
-    /// Interaction logic for Messege.xaml
+    /// Interaction logic for message.xaml
     /// </summary>
-    public partial class Messege : UserControl
+    public partial class message : UserControl
     {
-        public Messege()
+        public message()
         {
             InitializeComponent();
         }

@@ -42,7 +42,8 @@ namespace forum_system.model
 
         public ForumMember login(string userName, string password)
         {
-            throw new NotImplementedException();
+            return _dbService.login(userName, password);
+            //throw new NotImplementedException();
         }
 
         //return message with list in it and recursivly contain all the message of the discuss
