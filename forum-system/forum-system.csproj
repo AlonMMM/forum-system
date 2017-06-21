@@ -59,6 +59,9 @@
     <Compile Include="view\AddSubForum.xaml.cs">
       <DependentUpon>AddSubForum.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\addSubForumWindow.xaml.cs">
+      <DependentUpon>addSubForumWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\IView.cs" />
     <Compile Include="view\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -86,6 +89,10 @@
       <DependentUpon>SubForumWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="view\AddSubForum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\addSubForumWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

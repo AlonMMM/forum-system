@@ -78,3 +78,5 @@ C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForumW
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForumWindow.baml
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\AddSubForum.baml
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\Messege.baml
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\addSubForumWindow.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\addSubForumWindow.baml
