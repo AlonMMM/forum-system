@@ -133,3 +133,6 @@ C:\projects\school\forum-system\forum-system\obj\Debug\forum_system.Properties.R
 C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.csproj.GenerateResource.Cache
 C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.exe
 C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.pdb
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\DiscussionWindow.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\message.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\GeneratedInternalTypeHelper.g.cs

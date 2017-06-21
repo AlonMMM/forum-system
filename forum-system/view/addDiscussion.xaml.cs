@@ -17,16 +17,23 @@ namespace forum_system.view
     /// <summary>
     /// Interaction logic for addSubForumWindow.xaml
     /// </summary>
-    public partial class addSubForumWindow : Window
+    public partial class addDiscussion : Window
     {
-        public addSubForumWindow()
+        public addDiscussion()
         {
             InitializeComponent();
         }
 
         private void add_btn_Click(object sender, RoutedEventArgs e)
         {
+            if (titleBox.Text=="")
+            {
+                MessageBox.Show("Please enter title to the message")
+            }
+            else
+            {
 
+            }
         }
 
         private void exit_btn_Click(object sender, RoutedEventArgs e)
