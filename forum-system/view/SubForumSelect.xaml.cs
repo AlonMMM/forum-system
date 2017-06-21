@@ -22,13 +22,18 @@ namespace forum_system.view
     public partial class SubForumSelect : Window
     {
         IController controller;
-        List<SubForum> sub_forum_list;
+        List<string> sub_forum_list;
 
         public SubForumSelect(IController controller)
         {
             InitializeComponent();
             this.controller = controller;
-            sub_forum_list = this.controller.getSubForums();
+            sub_forum_list = new List<string>();            
+            foreach (SubForum item in this.controller.getSubForums())
+            {
+                sub_forum_list.Add(item.Name);
+            }
+
         }
 
         private void goToForum_Click(object sender, RoutedEventArgs e)

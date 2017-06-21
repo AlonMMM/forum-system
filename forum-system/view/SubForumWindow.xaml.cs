@@ -32,6 +32,7 @@ namespace forum_system.view
             get { return discussionsList; }           
         }
 
+
         public SubForumWindow(IController controller, string subForumName)
         {
             InitializeComponent();
