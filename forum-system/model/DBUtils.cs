@@ -35,10 +35,6 @@ namespace forum_system.model
             {
                 throw new Exception(e.Message);
             }
-            finally
-            {
-                
-            }
 
         }
 
@@ -55,10 +51,7 @@ namespace forum_system.model
             {
                 throw new Exception(e.Message);
             }
-            finally
-            {
-                
-            }
+
             return ans;
         }
 

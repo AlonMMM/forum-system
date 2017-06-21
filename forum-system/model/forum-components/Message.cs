@@ -16,6 +16,13 @@ namespace forum_system.model.forum_components
         private int repliedToId;
         private int discussionId;
 
+        private List<Message> replies = new List<Message>();
+
+        public List<Message> Replies
+        {
+            get { return replies = new List<Message>(); }
+        }
+        
         public Message(string creator,string content, string title,string date, int repliedToId , int discussionId)
         {
             this.creator = creator;

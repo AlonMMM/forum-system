@@ -19,5 +19,9 @@ namespace forum_system.model
         List<Discussion> getAllDiscussions(string subForumName);
 
         ForumMember login(string userName, string password);
+
+        Message getRootMessage(int discussId);
+
+        bool addSubForum(string name, string discription);
     }
 }

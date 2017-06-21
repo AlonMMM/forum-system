@@ -59,5 +59,16 @@ namespace forum_system.controller
         {
             throw new NotImplementedException();
         }
+
+        public Message getRootMessage(int discussId)
+        {
+            return model.getRootMessage(discussId);
+        }
+
+        public bool addSubForum(string name, string discription)
+        {
+
+            return model.addSubForum( name,  discription);
+        }
     }
 }

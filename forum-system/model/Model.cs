@@ -44,5 +44,42 @@ namespace forum_system.model
         {
             throw new NotImplementedException();
         }
+
+        //return message with list in it and recursivly contain all the message of the discuss
+        public Message getRootMessage(int discussId)
+        {
+            Message msg = null;
+
+            List<Message> allMessages = _dbService.getAllMessages(discussId);
+            msg = buildRootMessage(allMessages);
+            return msg;
+        }
+
+        private Message buildRootMessage(List<Message> allMessages)
+        {
+
+            int indexOfRoot = 0;
+            int counter = 0;
+            foreach (Message son in allMessages)
+            {
+                if (son.RepliedToId == -1)
+                    //this is the root index, have no father
+                    indexOfRoot = counter;
+                counter++;
+                foreach (Message father in allMessages)
+                {
+                    //finde the father in list and add to his message list the son message
+                    if (father.ID == son.RepliedToId)
+                        father.Replies.Add(son);
+                }
+            }
+
+            return allMessages.ElementAt(indexOfRoot);
+        }
+
+        public bool addSubForum(string name, string discription)
+        {
+            return _dbService.addSubForum(name, discription);
+        }
     }
 }
