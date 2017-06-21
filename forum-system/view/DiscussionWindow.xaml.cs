@@ -1,4 +1,6 @@
-﻿using System;
+﻿using forum_system.controller;
+using forum_system.model.forum_components;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +19,23 @@ namespace forum_system.view
     /// <summary>
     /// Interaction logic for DiscussionWindow.xaml
     /// </summary>
+    /// 
+
+
     public partial class DiscussionWindow : Window
     {
-        public DiscussionWindow()
+        private Message rootMessage;
+
+        public Message RootMessage
         {
-            InitializeComponent();
+            get { return rootMessage; }
+            set { rootMessage = value; }
+        }
+        public DiscussionWindow(IController controller,int messageID)
+        {
+            InitializeComponent();            
+            RootMessage = controller.getRootMessage(messageID);
+            MessagesTree.ItemsSource = RootMessage.Replies;
         }
     }
 }

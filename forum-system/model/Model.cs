@@ -75,7 +75,7 @@ namespace forum_system.model
                 {
                     //finde the father in list and add to his message list the son message
                     if (father.ID == son.RepliedToId)
-                        father.Replies.Add(son);
+                        father.addToReplies(son);
                 }
             }
 
