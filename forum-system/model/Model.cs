@@ -62,7 +62,6 @@ namespace forum_system.model
 
         private Message buildRootMessage(List<Message> allMessages)
         {
-
             int indexOfRoot = 0;
             int counter = 0;
             foreach (Message son in allMessages)

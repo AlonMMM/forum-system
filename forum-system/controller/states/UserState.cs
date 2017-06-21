@@ -21,6 +21,13 @@ namespace forum_system.model.states
         }
 
         public abstract void startDiscussion(Message message);
+
+        public abstract List<Discussion> getAllDiscussions(string subForumName);
+
+        public abstract List<SubForum> getAllSubForums();
+
+        public abstract bool addSubForum(string name, string discription);
+
     }
 
     public enum States

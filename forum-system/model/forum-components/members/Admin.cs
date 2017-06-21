@@ -16,5 +16,14 @@ namespace forum_system.model.forum_components
             userState = new ActiveState();
         }
 
+        public override bool addSubForum(string name, string discription)
+        {
+            return userState.addSubForum(name, discription);
+        }
+
+        public override bool isAdmin()
+        {
+            return true;
+        }
     }
 }

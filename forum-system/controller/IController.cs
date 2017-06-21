@@ -13,8 +13,8 @@ namespace forum_system.controller
 
         List<SubForum> getSubForums();
 
-        List<Discussion> getDiscussions(string subForumName);      
-        
+        List<Discussion> getDiscussions(string subForumName);
+
         bool Contain(string name);
 
         bool login(string userName, string password);
@@ -23,9 +23,10 @@ namespace forum_system.controller
 
         Message getRootMessage(int discussId);
 
-        bool addSubForum(string name , string discription);
+        bool addSubForum(string name, string discription);
 
+        bool isAdminLoggedIn();
     }
 
-    
+
 }

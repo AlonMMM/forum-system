@@ -18,7 +18,7 @@
 
 
         </ListView>
-        <Button Content="Add Guide" Height="23" VerticalAlignment="Bottom" Margin="0,0,216,77" Click="Button_Click"></Button>
+        <Button Name="addGuide" Content="Add Guide" Height="23" VerticalAlignment="Bottom" Margin="0,0,216,77" Click="Button_Click"></Button>
     </Grid>
 
 

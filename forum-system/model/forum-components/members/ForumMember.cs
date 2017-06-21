@@ -1,4 +1,5 @@
 ﻿using forum_system.controller.states;
+using forum_system.model.exceptions;
 using forum_system.model.states;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,31 @@ namespace forum_system.model.forum_components
             userState = new ActiveState();
         }
 
+        public void startDiscussion(Message message)
+        {
+            userState.startDiscussion(message);
+        }
+
+        public virtual bool isAdmin()
+        {
+            return false;
+        }
+
+        public List<Discussion> getAllDiscussions(string subForumName)
+        {
+            return userState.getAllDiscussions(subForumName);
+        }
+
+        public List<SubForum> getAllSubForums()
+        {
+            return userState.getAllSubForums();
+        }
+
+        public virtual bool addSubForum(string name, string discription)
+        {
+            throw new NoPremissionException("Normal member cannot add sub-forums");
+        }
+
         protected void setState(States state)
         {
             if (state == States.ACTIVE)
@@ -34,11 +60,6 @@ namespace forum_system.model.forum_components
                 userState = new BannedState();
             else if (state == States.NOT_ACTIVE)
                 userState = new NotActiveState();
-        }
-
-        public void startDiscussion(Message message)
-        {
-            userState.startDiscussion(message);
         }
     }
 }

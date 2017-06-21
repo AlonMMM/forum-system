@@ -10,6 +10,12 @@ namespace forum_system.model.forum_components
     {
         void startDiscussion(Message message);
 
+        List<Discussion> getAllDiscussions(string subForumName);
 
+        List<SubForum> getAllSubForums();
+
+        bool addSubForum(string name, string discription);
+
+        bool isAdmin();
     }
 }
