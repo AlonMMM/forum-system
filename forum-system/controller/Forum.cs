@@ -14,7 +14,7 @@ namespace forum_system.controller
     {
         private IModel model;
         private IView view;
-        
+        private ForumMember member;        
         public Forum(IView view, IModel model)
         {
             this.view = view;
@@ -52,12 +52,13 @@ namespace forum_system.controller
 
         void IController.notifyUser(string message)
         {
-            throw new NotImplementedException();
+            
         }
 
         public ForumMember login(string userName, string password)
         {
-            throw new NotImplementedException();
+            member = model.login(userName, password);
+            return member;
         }
 
         public Message getRootMessage(int discussId)

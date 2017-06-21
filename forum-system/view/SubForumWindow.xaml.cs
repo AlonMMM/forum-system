@@ -1,6 +1,8 @@
 ﻿using forum_system.controller;
+using forum_system.model.forum_components;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +22,48 @@ namespace forum_system.view
     /// </summary>
     public partial class SubForumWindow : Window
     {
+        IController controller;
+        
+        string subForumName;
+        private List<Discussion> discussionsList;
+
+        public List<Discussion> DiscussionList
+        {
+            get { return discussionsList; }           
+        }
+
+
         public SubForumWindow(IController controller, string subForumName)
         {
             InitializeComponent();
+            this.controller = controller;
+            this.subForumName = subForumName;
+            discussionsList = controller.getDiscussions(subForumName);
+            foreach (Discussion item in discussionsList)
+            {
+                listViewDiscussions.Items.Add(item.DiscussionID());
+            }
+        }
+
+        private void listView_Discussions_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            
         }
     }
+
+    public class TreeViewModel
+    {
+        private int myVar;
+
+        public int MyProperty
+        {
+            get { return myVar; }
+            set { myVar = value; }
+        }
+
+    }
+
+    
 }
+
+
