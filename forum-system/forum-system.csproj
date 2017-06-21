@@ -72,8 +72,8 @@
     <Compile Include="view\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="view\message.xaml.cs">
-      <DependentUpon>message.xaml</DependentUpon>
+    <Compile Include="view\MessageUserControl.xaml.cs">
+      <DependentUpon>MessageUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\SubForumSelect.xaml.cs">
       <DependentUpon>SubForumSelect.xaml</DependentUpon>
@@ -111,7 +111,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="view\message.xaml">
+    <Page Include="view\MessageUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

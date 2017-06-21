@@ -33,7 +33,7 @@ namespace forum_system.model.forum_components
             this.discussionId = discussionId;
         }
 
-        public Message(int id ,string creator, string content, string title, string date, int repliedToId , int discussionId)
+        public Message(int id ,string creator, string title, string content, string date, int repliedToId , int discussionId)
         {
             this.id = id;
             this.creator = creator;

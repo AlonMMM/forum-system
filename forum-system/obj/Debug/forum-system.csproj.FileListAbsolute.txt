@@ -81,7 +81,6 @@ C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\Messege.b
 F:\Apps\Git Respository\forum-system\forum-system\bin\Debug\model\DataBase\forums.accdb
 F:\Apps\Git Respository\forum-system\forum-system\bin\Debug\forum-system.exe
 F:\Apps\Git Respository\forum-system\forum-system\bin\Debug\forum-system.pdb
-F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum-system.csprojResolveAssemblyReference.cache
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\AddSubForum.g.cs
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\Login.g.cs
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\MainWindow.g.cs
@@ -100,8 +99,6 @@ F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\SubForumWindow.
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum-system.g.resources
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum_system.Properties.Resources.resources
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum-system.csproj.GenerateResource.Cache
-F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\message.g.cs
-F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\message.baml
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\DiscussionWindow.g.cs
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\DiscussionWindow.baml
 C:\projects\school\forum-system\forum-system\bin\Debug\model\database\forums.accdb
@@ -133,6 +130,5 @@ C:\projects\school\forum-system\forum-system\obj\Debug\forum_system.Properties.R
 C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.csproj.GenerateResource.Cache
 C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.exe
 C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.pdb
-C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\DiscussionWindow.g.cs
-C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\message.g.cs
-C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\GeneratedInternalTypeHelper.g.cs
+F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\MessageUserControl.g.cs
+F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\MessageUserControl.baml

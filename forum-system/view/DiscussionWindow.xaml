@@ -3,13 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:forum_system.model.forum_components"
+        xmlns:local="clr-namespace:forum_system.view"
         mc:Ignorable="d"
         Title="DiscussionWindow" Height="300" Width="300">
     <TreeView Name="MessagesTree" ItemsSource="{Binding}">
         <TreeView.Resources>
-            <HierarchicalDataTemplate DataType="{x:Type local:Message}" ItemsSource="{Binding Replies}">
-                <TextBlock Text="{Binding title}"></TextBlock>
+            <HierarchicalDataTemplate DataType="{x:Type local:MessageUserControl}" ItemsSource="{Binding Replies}">
+                
             </HierarchicalDataTemplate>
         </TreeView.Resources>
     </TreeView>
