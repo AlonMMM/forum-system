@@ -75,5 +75,26 @@ namespace forum_system.model
 
             return msg;
         }
+
+        private ForumMember login(string username,string passworduser )
+        {
+            ForumMember member = null;
+            string query = "SELECT * FROM user_table WHERE user_name = '" + username+ "' AND password ='" + passworduser + "'";
+            OleDbDataReader reader = _dbUtils.select(query);
+            while (reader.Read())
+            {
+
+                //now we need to build message from id
+                string user_name = reader.GetString(0);
+                string first_name = reader.GetString(1);
+                string last_name = reader.GetString(2);
+                string password = passworduser;
+
+                member = new ForumMember(user_name, first_name, last_name,  password);
+            }
+
+            return member;
+        }
+
     }
 }

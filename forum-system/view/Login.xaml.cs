@@ -30,36 +30,30 @@ namespace forum_system.view
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-//            if (username.Text!="" || password.Text!="")
-//            {
-//                try
-//                {
-//                  //  ForumMember fm = controller.login(username.Text, password.Text);//add soon
-//                   // if (fm==null)
-//                    //{
-//                      //  MessageBox.Show("rejected");
-
-////                    }
-//                    //controller.user = fm;//addsoon
-//                    MessageBox.Show("Log in successfully");
-//                   // ((MainWindow)Application.Current.MainWindow).notifyMe(user);//change and add
-//                }
-//                catch (Exception ex)
-//                {
-//                    MessageBox.Show(ex.Message);
-//                    return;
-//                }
-//            }
-            if(true)
+            if (password.Text == "" || username.Text == "")
             {
-                SubForumSelect subForumWindow = new SubForumSelect(controller);
-                subForumWindow.ShowDialog();
+                MessageBox.Show("unvalid input");
             }
             else
             {
-                MessageBox.Show("unvalid input");
-
+                try
+                {
+                    ForumMember member = controller.login(username.Text, password.Text);
+                    if (member!=null)
+                    {
+                        MessageBox.Show("Log in successfully");
+                        Close();
+                        SubForumSelect subForumWindow = new SubForumSelect(controller);
+                        subForumWindow.ShowDialog();
+                    }           
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
             }
+           
         }
     }
 }
