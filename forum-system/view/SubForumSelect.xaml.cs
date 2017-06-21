@@ -72,7 +72,7 @@ namespace forum_system.view
 
         private void addNewForum(object sender, RoutedEventArgs e)
         {
-            
+
         }
     }
 }

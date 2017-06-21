@@ -105,5 +105,9 @@ namespace forum_system.controller
         {
             view.notifyUser(message);
         }
+        public bool addDiscussionAndMessage(string title,string contentMessege)
+        {
+            return model.addDiscussionAndMessage(title, contentMessege);
+        }
     }
 }

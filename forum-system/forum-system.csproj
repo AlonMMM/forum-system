@@ -62,6 +62,9 @@
     <Compile Include="view\AddSubForum.xaml.cs">
       <DependentUpon>AddSubForum.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\addDiscussion.xaml.cs">
+      <DependentUpon>addDiscussion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\DiscussionWindow.xaml.cs">
       <DependentUpon>DiscussionWindow.xaml</DependentUpon>
     </Compile>
@@ -72,8 +75,8 @@
     <Compile Include="view\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="view\message.xaml.cs">
-      <DependentUpon>message.xaml</DependentUpon>
+    <Compile Include="view\MessageUserControl.xaml.cs">
+      <DependentUpon>MessageUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\SubForumSelect.xaml.cs">
       <DependentUpon>SubForumSelect.xaml</DependentUpon>
@@ -95,6 +98,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="view\addDiscussion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="view\DiscussionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,7 +114,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="view\message.xaml">
+    <Page Include="view\MessageUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

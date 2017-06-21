@@ -66,6 +66,11 @@ namespace forum_system.view
         {
 
         }
+
+        private void add_topic_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
     public class TreeViewModel
