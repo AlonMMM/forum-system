@@ -95,19 +95,7 @@ namespace forum_system.model.forum_components
                 date = value;
             }
         }
-        public string Creator
-        {
-            get
-            {
-                return creator;
-            }
-
-            set
-            {
-                creator = value;
-            }
-        }
-
+        
         public int RepliedToId
         {
             get
