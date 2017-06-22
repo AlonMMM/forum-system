@@ -3,13 +3,37 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:forum_system.view"
+        xmlns:local="clr-namespace:forum_system.model.forum_components"
         mc:Ignorable="d"
-        Title="DiscussionWindow" Height="300" Width="300">
+        Title="DiscussionWindow" Height="300" Width="1000">
+    <!--<StackPanel>
+        <Label>Title</Label>
+        <TextBlock TextWrapping="Wrap" Margin="6,0,10,0">This is a story all about how my life got twisted up and down now take a minute and sit right and i'll tell how bla bla bla</TextBlock>
+        <DockPanel   >    
+            <TextBlock TextAlignment="Right" DockPanel.Dock="Right" Height="17">Simo Hanouna</TextBlock>
+        </DockPanel>
+        <DockPanel Height="21"  >
+            <TextBlock TextAlignment="Right"  DockPanel.Dock="Right" ><Run Text="1.1.2001"/></TextBlock>
+        </DockPanel>
+    </StackPanel>-->
+    
     <TreeView Name="MessagesTree" ItemsSource="{Binding}">
+        
         <TreeView.Resources>
-            <HierarchicalDataTemplate DataType="{x:Type local:MessageUserControl}" ItemsSource="{Binding Replies}">
+            
+            <HierarchicalDataTemplate DataType="{x:Type local:Message}" ItemsSource="{Binding Replies}" >
                 
+                    <StackPanel>
+                    
+                    <Label Content="{Binding Title}"></Label>
+                    <TextBlock Width="800" TextWrapping="Wrap" Margin="6,0,10,0" Text="{Binding Content}"></TextBlock>
+        <DockPanel   >
+                        <TextBlock Text="{Binding Creator}" TextAlignment="Right" DockPanel.Dock="Right" Height="17"></TextBlock>
+        </DockPanel>
+        <DockPanel Height="21"  >
+                        <TextBlock TextAlignment="Right"  DockPanel.Dock="Right" Text="{Binding Date}"></TextBlock>
+        </DockPanel>
+    </StackPanel>
             </HierarchicalDataTemplate>
         </TreeView.Resources>
     </TreeView>

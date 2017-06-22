@@ -25,6 +25,7 @@ namespace forum_system.view
         private IController controller;
         
         string subForumName;
+
         private List<Discussion> discussionsList;
 
         public List<Discussion> DiscussionList
@@ -73,7 +74,8 @@ namespace forum_system.view
 
         private void add_topic_Click(object sender, RoutedEventArgs e)
         {
-
+            Window addDiscussion = new addDiscussion(subForumName , controller);
+            addDiscussion.Show();
         }
     }
 

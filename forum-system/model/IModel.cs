@@ -14,7 +14,7 @@ namespace forum_system.model
 
         List<SubForum> getAllSubForums();
 
-        void startDiscussion(Message message);
+        void startDiscussion(Message message,string subForum);
 
         List<Discussion> getAllDiscussions(string subForumName);
 
@@ -25,6 +25,7 @@ namespace forum_system.model
         Message getRootMessage(int discussId);
 
         bool addSubForum(string name, string discription);
-        bool addDiscussionAndMessage(string title, string contentMessege);
+
+        
     }
 }

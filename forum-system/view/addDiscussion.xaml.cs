@@ -1,4 +1,5 @@
-﻿using System;
+﻿using forum_system.controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,13 @@ namespace forum_system.view
     /// </summary>
     public partial class addDiscussion : Window
     {
-        public addDiscussion()
+        string subForum;
+        IController controller;
+        public addDiscussion(string subForum,IController controller)
         {
             InitializeComponent();
+            this.subForum = subForum;
+            this.controller = controller;
         }
 
         private void add_btn_Click(object sender, RoutedEventArgs e)
@@ -32,7 +37,10 @@ namespace forum_system.view
             }
             else
             {
-
+                string content = contectBox.Text;
+                string title = titleBox.Text;
+                controller.addDiscussion(this.subForum, title, content);
+                
             }
         }
 

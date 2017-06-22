@@ -9,12 +9,20 @@ namespace forum_system.model.forum_components
     public class Message
     {
         private int id;
-        private string creator;
         private string title;
         private string content;
         private string date;
         private int repliedToId;
         private int discussionId;
+
+        private string creator;
+
+        public string Creator
+        {
+            get { return creator; }
+            set { creator = value; }
+        }
+
 
         private List<Message> replies = new List<Message>();
 
@@ -73,6 +81,30 @@ namespace forum_system.model.forum_components
             set
             {
                 title = value;
+            }
+        }
+        public string Date
+        {
+            get
+            {
+                return date;
+            }
+
+            set
+            {
+                date = value;
+            }
+        }
+        public string Creator
+        {
+            get
+            {
+                return creator;
+            }
+
+            set
+            {
+                creator = value;
             }
         }
 

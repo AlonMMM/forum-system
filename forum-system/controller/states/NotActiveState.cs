@@ -5,30 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using forum_system.model.forum_components;
-using forum_system.model.exceptions;
 
 namespace forum_system.controller.states
 {
     public class NotActiveState : UserState
     {
-        public override bool addSubForum(string name, string discription)
+        public override void startDiscussion(Message message, string creator, string subforum)
         {
-            throw new NoPremissionException("Cannot add sub-forum while account is not active");
-        }
-
-        public override List<Discussion> getAllDiscussions(string subForumName)
-        {
-            return model.getAllDiscussions(subForumName);
-        }
-
-        public override List<SubForum> getAllSubForums()
-        {
-            return model.getAllSubForums();
-        }
-
-        public override void startDiscussion(Message message)
-        {
-            throw new NoPremissionException("Your account is not active. If you with you start a discussion, please re-activate your account.");
+            view.notifyUser("Your account is not active. If you with you start a discussion, please re-activate your account.");
         }
     }
 }

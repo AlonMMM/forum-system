@@ -18,9 +18,9 @@ namespace forum_system.model
             this.controller = controller;
         }
 
-        public void startDiscussion(Message message)
+        public void startDiscussion(Message message,string subForum)
         {
-            throw new NotImplementedException();
+            _dbService.addDiscussionAndMessage(message, subForum);
         }
 
         public List<SubForum> getAllSubForums()
@@ -86,9 +86,6 @@ namespace forum_system.model
             return _dbService.addSubForum(name, discription);
         }
 
-        public bool addDiscussionAndMessage(string title, string contentMessege)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
