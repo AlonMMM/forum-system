@@ -21,8 +21,11 @@ namespace forum_system.model.states
         }
 
         public abstract void startDiscussion(Message message, string userName,string subforum);
+
+        public abstract bool addSubForum(string name, string discription);
     }
 
+    
     public enum States
     {
         BANNED,

@@ -11,9 +11,9 @@ namespace forum_system.model.forum_components
     {
         void startDiscussion(Message message,string subForum);
 
-        List<Discussion> getAllDiscussions(string subForumName);
+        //List<Discussion> getAllDiscussions(string subForumName);
 
-        List<SubForum> getAllSubForums();
+        //List<SubForum> getAllSubForums();
 
         void setState(States state);
 

@@ -28,7 +28,7 @@ namespace forum_system.controller
         {
             try
             {
-                return member.getAllDiscussions(subForumName);
+                return model.getAllDiscussions(subForumName);
             }
             catch (NoPremissionException e)
             {
@@ -41,7 +41,7 @@ namespace forum_system.controller
         {
             try
             {
-                return member.getAllSubForums();
+                return model.getAllSubForums();
             }
             catch (NoPremissionException e)
             {

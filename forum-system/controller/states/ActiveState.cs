@@ -10,10 +10,16 @@ namespace forum_system.controller.states
 {
     public class ActiveState : UserState
     {
+        public override bool addSubForum(string name, string discription)
+        {
+            return model.addSubForum(name, discription);
+        }
+
         public override void startDiscussion(Message message,string creator, string subforum)
         {
             message.Creator = creator;
             model.startDiscussion(message,subforum);
         }
     }
+
 }
