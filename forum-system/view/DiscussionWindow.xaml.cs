@@ -35,14 +35,9 @@ namespace forum_system.view
         {
             InitializeComponent();            
             RootMessage = controller.getRootMessage(messageID);
-            //MessagesTree.ItemsSource = RootMessage.Replies;
-            //MessagesTree.ItemsSource = RootMessage.Replies;
-            List<MessageUserControl> test = new List<MessageUserControl>();
-            foreach (Message item in RootMessage.Replies)
-            {
-                test.Add(new MessageUserControl(controller, item));
-            }
-            MessagesTree.ItemsSource = test;
+            MessagesTree.ItemsSource = RootMessage.Replies;
+            
+            
 
         }
     }
