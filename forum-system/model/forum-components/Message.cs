@@ -75,6 +75,30 @@ namespace forum_system.model.forum_components
                 title = value;
             }
         }
+        public string Date
+        {
+            get
+            {
+                return date;
+            }
+
+            set
+            {
+                date = value;
+            }
+        }
+        public string Creator
+        {
+            get
+            {
+                return creator;
+            }
+
+            set
+            {
+                creator = value;
+            }
+        }
 
         public int RepliedToId
         {
