@@ -39,7 +39,6 @@ namespace forum_system.view
             InitializeComponent();
             this.controller = controller;
             this.subForumName = subForumName;
-            changeVisibility(controller.isAdminLoggedIn());
 
             discussionsList = controller.getDiscussions(subForumName);
 
@@ -50,14 +49,6 @@ namespace forum_system.view
                     listViewDiscussions.Items.Add(item.DiscussionID());
                 }
             }
-        }
-
-        private void changeVisibility(bool isAdmin)
-        {
-            if (isAdmin)
-                addGuide.Visibility = Visibility.Visible;
-            else
-                addGuide.Visibility = Visibility.Hidden;
         }
 
         private void listView_Discussions_MouseDoubleClick(object sender, MouseButtonEventArgs e)

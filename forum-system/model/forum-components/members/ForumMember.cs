@@ -48,9 +48,9 @@ namespace forum_system.model.forum_components
                 userState = new NotActiveState();
         }
 
-        public bool isAdmin()
+        public virtual bool isAdmin()
         {
-            throw new NotImplementedException();
+            return false;
         }
     }
 }

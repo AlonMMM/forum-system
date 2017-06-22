@@ -43,7 +43,7 @@ namespace forum_system.controller
             {
                 return model.getAllSubForums();
             }
-            catch (NoPremissionException e)
+            catch (Exception e)
             {
                 view.notifyUser(e.Message);
                 return null;
@@ -87,8 +87,7 @@ namespace forum_system.controller
             return member.isAdmin();
         }
 
-        //if contain return true
-        public bool Contain(string name)
+        public bool isSubForumNameTaken(string name)
         {
             List<SubForum> subForumList = getSubForums();
             foreach (var SubForum in subForumList)

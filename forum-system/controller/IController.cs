@@ -15,7 +15,7 @@ namespace forum_system.controller
 
         List<Discussion> getDiscussions(string subForumName);      
         
-        bool Contain(string name);
+        bool isSubForumNameTaken(string name);
 
         bool login(string userName, string password);
 

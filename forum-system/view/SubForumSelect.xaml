@@ -10,11 +10,18 @@
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVis" />
     </Window.Resources>
-    
+
     <Grid>
         <TextBlock x:Name="header" HorizontalAlignment="Left" Height="37" Margin="111,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" TextAlignment="Center"><Run FontWeight="Bold" FontSize="18" Text="Select sub-forum"/><LineBreak/><Run/></TextBlock>
         <ComboBox x:Name="sub_forum_options" HorizontalAlignment="Left" Height="60" Margin="85,147,0,0" VerticalAlignment="Top" Width="325" Loaded="subForumLoaded" SelectionChanged="comboBox_SelectionChanged"/>
         <Button x:Name="choose_sub_forum" Content="Choose Sub-forum" HorizontalAlignment="Left" Height="34" Margin="135,234,0,0" VerticalAlignment="Top" Width="225" Click="button_Click"/>
-        <Button x:Name="createNewSubForum" Content="Create new Sub-forum" HorizontalAlignment="Left" Height="34" Margin="135,0,0,91" VerticalAlignment="Bottom" Width="225" Click="addNewForum"/>
+        <Button x:Name="createNewSubForum" Content="Create new Sub-forum" HorizontalAlignment="Left" Height="34" Margin="135,0,0,143" VerticalAlignment="Bottom" Width="225" Click="addNewForum"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="41,350,0,88" >
+                <Hyperlink Click="Hyperlink_Click"> Ban a member from the forum </Hyperlink>
+        </TextBlock>
+        <Button x:Name="button_ban" Content="Ban" HorizontalAlignment="Left" Height="32" Margin="269,387,0,0" VerticalAlignment="Top" Width="64" Click="button_ban_Click"
+                Visibility="Hidden"/>
+        <TextBox x:Name="textBox_ban_name" HorizontalAlignment="Left" Height="32" Margin="41,387,0,0" TextWrapping="Wrap" Text="Type the username you wish to ban" VerticalAlignment="Top" Width="203"
+                 Visibility="Hidden"/>
     </Grid>
 </Window>

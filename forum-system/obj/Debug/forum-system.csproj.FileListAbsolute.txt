@@ -108,7 +108,6 @@ C:\projects\school\forum-system\forum-system\obj\Debug\view\AddSubForum.g.cs
 C:\projects\school\forum-system\forum-system\obj\Debug\view\DiscussionWindow.g.cs
 C:\projects\school\forum-system\forum-system\obj\Debug\view\Login.g.cs
 C:\projects\school\forum-system\forum-system\obj\Debug\view\MainWindow.g.cs
-C:\projects\school\forum-system\forum-system\obj\Debug\view\message.g.cs
 C:\projects\school\forum-system\forum-system\obj\Debug\view\SubForumSelect.g.cs
 C:\projects\school\forum-system\forum-system\obj\Debug\view\SubForumWindow.g.cs
 C:\projects\school\forum-system\forum-system\obj\Debug\App.g.cs
@@ -120,7 +119,6 @@ C:\projects\school\forum-system\forum-system\obj\Debug\view\AddSubForum.baml
 C:\projects\school\forum-system\forum-system\obj\Debug\view\DiscussionWindow.baml
 C:\projects\school\forum-system\forum-system\obj\Debug\view\Login.baml
 C:\projects\school\forum-system\forum-system\obj\Debug\view\MainWindow.baml
-C:\projects\school\forum-system\forum-system\obj\Debug\view\message.baml
 C:\projects\school\forum-system\forum-system\obj\Debug\view\SubForumSelect.baml
 C:\projects\school\forum-system\forum-system\obj\Debug\view\SubForumWindow.baml
 C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.g.resources
@@ -137,3 +135,7 @@ C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\GeneratedInter
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\addDiscussion.baml
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\DiscussionWindow.baml
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\MessageUserControl.baml
+C:\projects\school\forum-system\forum-system\obj\Debug\view\addDiscussion.g.cs
+C:\projects\school\forum-system\forum-system\obj\Debug\view\MessageUserControl.g.cs
+C:\projects\school\forum-system\forum-system\obj\Debug\view\addDiscussion.baml
+C:\projects\school\forum-system\forum-system\obj\Debug\view\MessageUserControl.baml
