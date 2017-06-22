@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,8 +58,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="model\DBService.cs" />
+    <Compile Include="model\exceptions\NoPremissionException.cs" />
     <Compile Include="view\AddSubForum.xaml.cs">
       <DependentUpon>AddSubForum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\addDiscussion.xaml.cs">
+      <DependentUpon>addDiscussion.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\DiscussionWindow.xaml.cs">
       <DependentUpon>DiscussionWindow.xaml</DependentUpon>
@@ -92,6 +98,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="view\addDiscussion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="view\DiscussionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -119,12 +129,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="model\DBUtils.cs" />
-    <Compile Include="model\Discassion.cs" />
-    <Compile Include="model\forum-components\Admin.cs" />
+    <Compile Include="model\forum-components\members\Admin.cs" />
     <Compile Include="model\forum-components\Discussion.cs" />
-    <Compile Include="model\forum-components\ForumMember.cs" />
-    <Compile Include="model\forum-components\Guide.cs" />
-    <Compile Include="model\forum-components\IMember.cs" />
+    <Compile Include="model\forum-components\members\ForumMember.cs" />
+    <Compile Include="model\forum-components\members\Guide.cs" />
+    <Compile Include="model\forum-components\members\IMember.cs" />
     <Compile Include="model\forum-components\Message.cs" />
     <Compile Include="model\forum-components\SubForum.cs" />
     <Compile Include="model\IModel.cs" />

@@ -10,7 +10,7 @@ namespace forum_system.controller.states
 {
     public class BannedState : UserState
     {
-        public override void startDiscussion(Message message)
+        public override void startDiscussion(Message message, string creator, string subforum)
         {
             view.notifyUser("You are banned! Can't start a discussion");
         }

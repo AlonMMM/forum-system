@@ -73,11 +73,9 @@ D:\Git\forum-system\forum-system\obj\Debug\forum-system.g.resources
 D:\Git\forum-system\forum-system\obj\Debug\forum_system.Properties.Resources.resources
 D:\Git\forum-system\forum-system\obj\Debug\forum-system.csproj.GenerateResource.Cache
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\AddSubForum.g.cs
-C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\Messege.g.cs
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForumWindow.g.cs
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\SubForumWindow.baml
 C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\AddSubForum.baml
-C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\Messege.baml
 F:\Apps\Git Respository\forum-system\forum-system\bin\Debug\model\DataBase\forums.accdb
 F:\Apps\Git Respository\forum-system\forum-system\bin\Debug\forum-system.exe
 F:\Apps\Git Respository\forum-system\forum-system\bin\Debug\forum-system.pdb
@@ -132,3 +130,10 @@ C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.exe
 C:\projects\school\forum-system\forum-system\obj\Debug\forum-system.pdb
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\MessageUserControl.g.cs
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\MessageUserControl.baml
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\addDiscussion.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\DiscussionWindow.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\MessageUserControl.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\addDiscussion.baml
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\DiscussionWindow.baml
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\MessageUserControl.baml

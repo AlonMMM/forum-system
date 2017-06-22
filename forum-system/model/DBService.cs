@@ -139,6 +139,49 @@ namespace forum_system.model
             }
             return admin;
         }
+         
+        
+       public bool addDiscussionAndMessage(Message msg, string subForum)
+        {
+            string creator_userName = msg.Creator;
+            DateTime localDate = DateTime.Now;
+            string date = localDate.ToString();
+            bool b = true;
+            string id = addFirstMessage(creator_userName, msg.Title, msg.Content, msg.RepliedToId,date);
+            if (id != "")
+            {
+                addDiscussion(id, subForum);
+                updateMessegeDiscussion(id);
+
+            }
+            return b;
+        }
+
+        public string addFirstMessage(string creator_userName, string title, string content, int replied_to_id, string date)
+        {
+            string id = "";
+            string query = "INSERT INTO message_table (creator_userName,title,content,date,replied_to_id,discussion_id) VALUES(" + "'" + creator_userName + "', " + "'" + title + "', '" + content + "','" + date + "',-1,-1)";
+            if (_dbUtils.insert(query))
+            {
+                string query2 = "SELECT max(message_id) FROM message_table";
+                OleDbDataReader reader = _dbUtils.select(query2);
+                while (reader.Read())
+                {
+                    id = reader.GetString(0);
+                }
+            }
+            return id;
+        }
+        public bool addDiscussion(string id, string subForum)
+        {
+            string query = "INSERT INTO discussion_table(openning_message_id, sub_forum) VALUES(" + "'" + id + "', " + "'" + subForum + "')";
+            return _dbUtils.insert(query);
+        }
+        public bool updateMessegeDiscussion(string id)
+        {
+            string query = " UPDATE message_table discution_id=" + id + "WHERE message_id ='" + id + "' ";
+            return _dbUtils.update(query);
+        }
 
     }
 }

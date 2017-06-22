@@ -22,9 +22,10 @@ namespace forum_system.view
     /// </summary>
     public partial class SubForumWindow : Window
     {
-        IController controller;
+        private IController controller;
         
         string subForumName;
+
         private List<Discussion> discussionsList;
 
         public List<Discussion> DiscussionList
@@ -38,11 +39,25 @@ namespace forum_system.view
             InitializeComponent();
             this.controller = controller;
             this.subForumName = subForumName;
+            changeVisibility(controller.isAdminLoggedIn());
+
             discussionsList = controller.getDiscussions(subForumName);
-            foreach (Discussion item in discussionsList)
+
+            if (discussionsList != null)
             {
-                listViewDiscussions.Items.Add(item.DiscussionID());
+                foreach (Discussion item in discussionsList)
+                {
+                    listViewDiscussions.Items.Add(item.DiscussionID());
+                }
             }
+        }
+
+        private void changeVisibility(bool isAdmin)
+        {
+            if (isAdmin)
+                addGuide.Visibility = Visibility.Visible;
+            else
+                addGuide.Visibility = Visibility.Hidden;
         }
 
         private void listView_Discussions_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -55,6 +70,12 @@ namespace forum_system.view
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void add_topic_Click(object sender, RoutedEventArgs e)
+        {
+            Window addDiscussion = new addDiscussion(subForumName , controller);
+            addDiscussion.Show();
         }
     }
 

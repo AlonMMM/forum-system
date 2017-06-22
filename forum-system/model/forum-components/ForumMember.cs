@@ -36,9 +36,9 @@ namespace forum_system.model.forum_components
                 userState = new NotActiveState();
         }
 
-        public void startDiscussion(Message message)
+        public void startDiscussion(Message message,string subForum)
         {
-            userState.startDiscussion(message);
+            userState.startDiscussion(message, user_name, subForum);
         }
     }
 }

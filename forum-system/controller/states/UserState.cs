@@ -20,7 +20,7 @@ namespace forum_system.model.states
             model = appliedModel;
         }
 
-        public abstract void startDiscussion(Message message);
+        public abstract void startDiscussion(Message message, string userName,string subforum);
     }
 
     public enum States
