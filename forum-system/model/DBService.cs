@@ -185,5 +185,12 @@ namespace forum_system.model
             return _dbUtils.update(query);
         }
 
+        public bool addCommmandtMessage(string creator_userName, string title, string content, int replied_to_id, string date, int discussion_id )
+        {          
+            string query = "INSERT INTO message_table ([creator_userName],[title],[content],[date],[replied_to_id],[discussion_id]) VALUES(" + "'" + creator_userName + "', " + "'" + title + "', '" + content + "','" + date + "',"+ replied_to_id + ","+ discussion_id + ")";
+            return _dbUtils.insert(query);
+            
+        }
+
     }
 }

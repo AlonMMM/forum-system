@@ -112,5 +112,11 @@ namespace forum_system.controller
             string date = localDate.ToString();
             member.startDiscussion(new Message("", title,content, date, -1, -1),subForum);
         }
+
+        public void addCommendaddCommmandtMessage(Message message)
+        {
+            member.addCommendaddCommmandtMessage(message);
+        }
+
     }
 }

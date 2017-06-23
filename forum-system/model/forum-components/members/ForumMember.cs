@@ -33,6 +33,8 @@ namespace forum_system.model.forum_components
             userState.startDiscussion(message, user_name, subForum);
         }
 
+
+
         public virtual bool addSubForum(string name, string discription)
         {
             throw new NoPremissionException("Normal member cannot add sub-forums");
@@ -51,6 +53,10 @@ namespace forum_system.model.forum_components
         public virtual bool isAdmin()
         {
             return false;
+        }
+        public void addCommendaddCommmandtMessage(Message message)
+        {
+             userState.addCommendaddCommmandtMessage(message);
         }
     }
 }

@@ -20,6 +20,11 @@ namespace forum_system.controller.states
             message.Creator = creator;
             model.startDiscussion(message,subforum);
         }
+
+        public override void addCommendaddCommmandtMessage(Message message)
+        {
+            model.addCommendaddCommmandtMessage(message);
+        }
     }
 
 }

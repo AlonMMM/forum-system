@@ -20,5 +20,9 @@ namespace forum_system.model.forum_components
         bool addSubForum(string name, string discription);
 
         bool isAdmin();
+
+        void addCommendaddCommmandtMessage(Message message);
+
+
     }
 }

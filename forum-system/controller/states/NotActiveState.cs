@@ -20,5 +20,11 @@ namespace forum_system.controller.states
         {
             view.notifyUser("Your account is not active. If you with you start a discussion, please re-activate your account.");
         }
+
+        public override void addCommendaddCommmandtMessage(Message message)
+        {
+            view.notifyUser("Your account is not active. If you with you start a discussion, please re-activate your account.");
+
+        }
     }
 }

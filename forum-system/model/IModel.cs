@@ -25,7 +25,6 @@ namespace forum_system.model
         Message getRootMessage(int discussId);
 
         bool addSubForum(string name, string discription);
-
-        
+        bool addCommendaddCommmandtMessage(Message message);
     }
 }

@@ -23,6 +23,11 @@ namespace forum_system.model.forum_components
             set { creator = value; }
         }
 
+        public int DiscussionId
+        {
+            get {return discussionId;}
+            set { discussionId=value;}
+        }
 
         private List<Message> replies = new List<Message>();
 
