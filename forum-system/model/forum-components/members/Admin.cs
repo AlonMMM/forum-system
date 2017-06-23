@@ -21,5 +21,10 @@ namespace forum_system.model.forum_components
             return userState.addSubForum(name, discription);
         }
 
+        public bool isAdmin()
+        {
+            return true;
+        } 
+
     }
 }

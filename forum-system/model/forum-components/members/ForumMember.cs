@@ -50,7 +50,7 @@ namespace forum_system.model.forum_components
 
         public bool isAdmin()
         {
-            throw new NotImplementedException();
+            return false;
         }
     }
 }
