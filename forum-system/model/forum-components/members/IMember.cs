@@ -21,8 +21,8 @@ namespace forum_system.model.forum_components
 
         bool isAdmin();
 
-        void addCommendaddCommmandtMessage(Message message);
+        void addReplytMessage(Message message);
 
-
+        string getMemberUserName();
     }
 }

@@ -21,7 +21,7 @@ namespace forum_system.controller.states
             view.notifyUser("You are banned! Can't start a discussion");
         }
 
-        public override void addCommendaddCommmandtMessage(Message message)
+        public override void addReplytMessage(Message message)
         {
             view.notifyUser("You are banned! Can't start a discussion");
         }

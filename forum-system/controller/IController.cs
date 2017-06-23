@@ -29,7 +29,7 @@ namespace forum_system.controller
 
         bool isAdminLoggedIn();
 
-        void addCommendaddCommmandtMessage(Message message);
+        void addReplytMessage(Message message);
     }
 
     

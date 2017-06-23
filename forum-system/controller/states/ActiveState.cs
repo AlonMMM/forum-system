@@ -21,7 +21,7 @@ namespace forum_system.controller.states
             model.startDiscussion(message,subforum);
         }
 
-        public override void addCommendaddCommmandtMessage(Message message)
+        public override void addReplytMessage(Message message)
         {
             model.addCommendaddCommmandtMessage(message);
         }

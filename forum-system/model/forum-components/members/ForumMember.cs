@@ -54,9 +54,14 @@ namespace forum_system.model.forum_components
         {
             return false;
         }
-        public void addCommendaddCommmandtMessage(Message message)
+        public void addReplytMessage(Message message)
         {
-             userState.addCommendaddCommmandtMessage(message);
+             userState.addReplytMessage(message);
+        }
+
+        public string getMemberUserName()
+        {
+            return user_name;
         }
     }
 }

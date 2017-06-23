@@ -46,7 +46,6 @@ F:\Apps\Git Respository\Forum-System\forum-system\forum-system\obj\Debug\forum-s
 F:\Apps\Git Respository\forum-system\forum-system\bin\Debug\forum-system.exe.config
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum-system.exe
 F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum-system.pdb
-D:\Git\forum-system\forum-system\obj\Debug\forum-system.csprojResolveAssemblyReference.cache
 D:\Git\forum-system\forum-system\obj\Debug\view\AddSubForum.g.cs
 D:\Git\forum-system\forum-system\obj\Debug\view\Login.g.cs
 D:\Git\forum-system\forum-system\obj\Debug\view\MainWindow.g.cs
@@ -144,3 +143,5 @@ D:\Git\forum-system\forum-system\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Git\forum-system\forum-system\obj\Debug\view\addDiscussion.baml
 D:\Git\forum-system\forum-system\obj\Debug\view\DiscussionWindow.baml
 D:\Git\forum-system\forum-system\obj\Debug\view\MessageUserControl.baml
+D:\Git\forum-system\forum-system\obj\Debug\view\AddMessageReply.g.cs
+D:\Git\forum-system\forum-system\obj\Debug\view\AddMessageReply.baml

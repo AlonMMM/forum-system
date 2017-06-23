@@ -33,7 +33,7 @@
             <TextBlock TextAlignment="Right"  DockPanel.Dock="Right" Text="{Binding RootMessage.Date}"></TextBlock>
         </DockPanel>
         <DockPanel Height="21"  >
-            <Button HorizontalAlignment="Right" DockPanel.Dock="Right" Content="Comment" Width="74" Click="AddReplyToDiscussion"/>
+            <Button HorizontalAlignment="Right" DockPanel.Dock="Right" Content="Comment" Width="74" Click="AddReplyToDiscussion" Height="21" VerticalAlignment="Top"/>
         </DockPanel>
         </StackPanel>
         <TreeView Name="MessagesTree" ItemsSource="{Binding}" TreeViewItem.Selected="TreeViewItemSelected" BorderThickness="0">

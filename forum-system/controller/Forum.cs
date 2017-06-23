@@ -113,9 +113,10 @@ namespace forum_system.controller
             member.startDiscussion(new Message("", title,content, date, -1, -1),subForum);
         }
 
-        public void addCommendaddCommmandtMessage(Message message)
+        public void addReplytMessage(Message message)
         {
-            member.addCommendaddCommmandtMessage(message);
+            message.Creator = member.getMemberUserName();
+            member.addReplytMessage(message);
         }
 
     }

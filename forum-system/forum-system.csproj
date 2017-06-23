@@ -59,6 +59,9 @@
     </ApplicationDefinition>
     <Compile Include="model\DBService.cs" />
     <Compile Include="model\exceptions\NoPremissionException.cs" />
+    <Compile Include="view\AddMessageReply.xaml.cs">
+      <DependentUpon>AddMessageReply.xaml</DependentUpon>
+    </Compile>
     <Compile Include="view\AddSubForum.xaml.cs">
       <DependentUpon>AddSubForum.xaml</DependentUpon>
     </Compile>
@@ -94,6 +97,10 @@
     <Compile Include="view\SubForumWindow.xaml.cs">
       <DependentUpon>SubForumWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="view\AddMessageReply.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="view\AddSubForum.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

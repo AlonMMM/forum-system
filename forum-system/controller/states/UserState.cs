@@ -24,7 +24,7 @@ namespace forum_system.model.states
 
         public abstract bool addSubForum(string name, string discription);
 
-        public abstract void addCommendaddCommmandtMessage(Message message);
+        public abstract void addReplytMessage(Message message);
 
     }
 

@@ -38,10 +38,12 @@ namespace forum_system.view
             get { return rootMessage; }
             set { rootMessage = value; }
         }
+        IController controller;
         public DiscussionWindow(IController controller,int messageID)
         {
             InitializeComponent();
             DataContext = this;
+            this.controller = controller;
             RootMessage = controller.getRootMessage(messageID);
             MessagesTree.ItemsSource = RootMessage.Replies;  
         }
@@ -49,7 +51,10 @@ namespace forum_system.view
         private void AddReplyMessage(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            var message = button.DataContext;        
+            Message message = (Message)button.DataContext;
+            AddMessageReply ams = new AddMessageReply(controller, message);
+            ams.ShowDialog();
+            Close();
             //Message selectedTVI = (Message)MessagesTree.SelectedItem;
         }
 
@@ -63,7 +68,9 @@ namespace forum_system.view
 
         private void AddReplyToDiscussion(object sender, RoutedEventArgs e)
         {
-
+            AddMessageReply ams = new AddMessageReply(controller, RootMessage);
+            ams.ShowDialog();
+            Close();
         }
     }
 }
