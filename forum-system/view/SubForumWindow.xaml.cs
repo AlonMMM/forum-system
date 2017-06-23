@@ -46,7 +46,7 @@ namespace forum_system.view
             {
                 foreach (Discussion item in discussionsList)
                 {
-                    listViewDiscussions.Items.Add(item.DiscussionID());
+                    listViewDiscussions.Items.Add(item.OpeningMessage.Title);
                 }
             }
         }

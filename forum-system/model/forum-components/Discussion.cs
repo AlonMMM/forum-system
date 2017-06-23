@@ -23,6 +23,12 @@ namespace forum_system.model.forum_components
         public int DiscussionID()
         {
             return _discussionID;
+        }        
+
+        public Message OpeningMessage
+        {
+            get { return message; }
+            set { message = value; }
         }
 
         public string SubForum()
