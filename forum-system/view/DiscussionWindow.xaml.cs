@@ -24,6 +24,13 @@ namespace forum_system.view
 
     public partial class DiscussionWindow : Window
     {
+        private Message repliedToMessage;
+
+        public Message RepliedToMessage
+        {
+            get { return repliedToMessage; }
+            set { repliedToMessage = value; }
+        }
         private Message rootMessage;
 
         public Message RootMessage
@@ -34,10 +41,28 @@ namespace forum_system.view
         public DiscussionWindow(IController controller,int messageID)
         {
             InitializeComponent();
+            DataContext = this;
             RootMessage = controller.getRootMessage(messageID);
-            MessagesTree.ItemsSource = RootMessage.Replies;
-            
-            
+            MessagesTree.ItemsSource = RootMessage.Replies;  
+        }
+
+        private void AddReplyMessage(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            var message = button.DataContext;        
+            //Message selectedTVI = (Message)MessagesTree.SelectedItem;
+        }
+
+        private void TreeViewItemSelected(object sender, RoutedEventArgs e)
+        {
+            //MessagesTree.Tag = e.OriginalSource;
+            //Message selectedTVI = MessagesTree.Tag as Message;
+            //this.lastSelectedTreeViewItem = tvi;
+            Message selectedTVI = (Message)MessagesTree.SelectedItem;
+        }
+
+        private void AddReplyToDiscussion(object sender, RoutedEventArgs e)
+        {
 
         }
     }

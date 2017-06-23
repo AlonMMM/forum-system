@@ -139,3 +139,6 @@ C:\projects\school\forum-system\forum-system\obj\Debug\view\addDiscussion.g.cs
 C:\projects\school\forum-system\forum-system\obj\Debug\view\MessageUserControl.g.cs
 C:\projects\school\forum-system\forum-system\obj\Debug\view\addDiscussion.baml
 C:\projects\school\forum-system\forum-system\obj\Debug\view\MessageUserControl.baml
+F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\addDiscussion.g.cs
+F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\view\addDiscussion.baml
+F:\Apps\Git Respository\forum-system\forum-system\obj\Debug\forum-system.csprojResolveAssemblyReference.cache
