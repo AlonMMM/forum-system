@@ -72,7 +72,8 @@ namespace forum_system.view
 
         private void addNewForum(object sender, RoutedEventArgs e)
         {
-
+            AddSubForum addSubForum = new AddSubForum(controller);
+            addSubForum.ShowDialog();
         }
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)

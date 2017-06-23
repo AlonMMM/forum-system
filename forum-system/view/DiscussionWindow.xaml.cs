@@ -33,7 +33,7 @@ namespace forum_system.view
         }
         public DiscussionWindow(IController controller,int messageID)
         {
-            InitializeComponent();            
+            InitializeComponent();
             RootMessage = controller.getRootMessage(messageID);
             MessagesTree.ItemsSource = RootMessage.Replies;
             

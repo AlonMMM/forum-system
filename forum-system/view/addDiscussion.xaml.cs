@@ -37,9 +37,19 @@ namespace forum_system.view
             }
             else
             {
-                string content = contectBox.Text;
-                string title = titleBox.Text;
-                controller.addDiscussion(this.subForum, title, content);
+                try
+                {
+                    string content = contectBox.Text;
+                    string title = titleBox.Text;
+                    controller.addDiscussion(this.subForum, title, content);
+                    //here need to update the subForum window with the new topic....
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Problem with server accur, please try again later.");
+                }
+                Close();
                 
             }
         }

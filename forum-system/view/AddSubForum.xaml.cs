@@ -34,19 +34,39 @@ namespace forum_system.view
 
         private void CreateSubForum(object sender, RoutedEventArgs e)
         {
-            if (controller.isSubForumNameTaken(name.Text))
+            if(name.Text=="" )
             {
-                MessageBox.Show("name already exists");   
+                MessageBox.Show("Please enter name");
             }
-            else
+            else if(passwordBox.Password != "admin")
             {
-                controller.addSubForum(name.Text, Description.Text);
+                MessageBox.Show("Please enter valid admins password");
             }
+            else if (controller.isSubForumNameTaken(name.Text))
+            {
+                MessageBox.Show("name already exists");
+            }
+            else 
+            {
+                try
+                {
+                    controller.addSubForum(name.Text, Description.Text);
+                    MessageBox.Show("Successfully add sub forum");
+                    //need to update the list of the selectSubForum window...
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Problem with server accur, please try again later.");
+                }
+            }
+
         }
 
-        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
+        private void button_Click(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
+
+  
     }
 }

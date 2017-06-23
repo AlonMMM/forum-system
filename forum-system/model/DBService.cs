@@ -79,9 +79,11 @@ namespace forum_system.model
 
         }
 
-        internal bool addSubForum(string name, string discription)
+        public bool addSubForum(string name, string discription)
         {
-            throw new NotImplementedException();
+            string query = "INSERT INTO sub_forum_table(sub_forum_name, description) VALUES(" + "'" + name + "', " + "'" + discription + "')";
+            bool ans =_dbUtils.insert(query);
+            return ans;
         }
 
         private Message getMessageByID(int messageID)
@@ -147,8 +149,8 @@ namespace forum_system.model
             DateTime localDate = DateTime.Now;
             string date = localDate.ToString();
             bool b = true;
-            string id = addFirstMessage(creator_userName, msg.Title, msg.Content, msg.RepliedToId,date);
-            if (id != "")
+            int id = addFirstMessage(creator_userName, msg.Title, msg.Content, msg.RepliedToId,date);
+            if (id != -1)
             {
                 addDiscussion(id, subForum);
                 updateMessegeDiscussion(id);
@@ -157,29 +159,29 @@ namespace forum_system.model
             return b;
         }
 
-        public string addFirstMessage(string creator_userName, string title, string content, int replied_to_id, string date)
+        public int addFirstMessage(string creator_userName, string title, string content, int replied_to_id, string date)
         {
-            string id = "";
-            string query = "INSERT INTO message_table (creator_userName,title,content,date,replied_to_id,discussion_id) VALUES(" + "'" + creator_userName + "', " + "'" + title + "', '" + content + "','" + date + "',-1,-1)";
+            int id = -1;
+            string query = "INSERT INTO message_table ([creator_userName],[title],[content],[date],[replied_to_id],[discussion_id]) VALUES(" + "'" + creator_userName + "', " + "'" + title + "', '" + content + "','" + date + "',-1,-1)";
             if (_dbUtils.insert(query))
             {
                 string query2 = "SELECT max(message_id) FROM message_table";
                 OleDbDataReader reader = _dbUtils.select(query2);
                 while (reader.Read())
                 {
-                    id = reader.GetString(0);
+                    id = reader.GetInt32(0);
                 }
             }
             return id;
         }
-        public bool addDiscussion(string id, string subForum)
+        public bool addDiscussion(int id, string subForum)
         {
-            string query = "INSERT INTO discussion_table(openning_message_id, sub_forum) VALUES(" + "'" + id + "', " + "'" + subForum + "')";
+            string query = "INSERT INTO discussion_table(openning_message_id, sub_forum_id) VALUES(" + id + ", " + "'" + subForum + "')";
             return _dbUtils.insert(query);
         }
-        public bool updateMessegeDiscussion(string id)
+        public bool updateMessegeDiscussion(int id)
         {
-            string query = " UPDATE message_table discution_id=" + id + "WHERE message_id ='" + id + "' ";
+            string query = " UPDATE message_table SET discussion_id=" + id + " WHERE message_id =" + id;
             return _dbUtils.update(query);
         }
 

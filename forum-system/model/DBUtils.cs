@@ -46,10 +46,11 @@ namespace forum_system.model
                 openConnection();
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 OleDbDataReader reader = cmd.ExecuteReader();
+                ans = true;
             }
             catch (Exception e)
             {
-                throw new Exception(e.Message);
+                ans = false;
             }
 
             return ans;
@@ -63,6 +64,7 @@ namespace forum_system.model
                 openConnection();
                 OleDbCommand cmd = new OleDbCommand(query, conn);
                 OleDbDataReader reader = cmd.ExecuteReader();
+                ans = true;
             }
             catch (Exception e)
             {
@@ -71,11 +73,7 @@ namespace forum_system.model
 
             return ans;
         }
-
-
-
-
-
+        
         private void openConnection()
         {
             if (conn.State != ConnectionState.Open)
