@@ -34,14 +34,13 @@ namespace forum_system.view
 
         private void CreateSubForum(object sender, RoutedEventArgs e)
         {
-            if (controller.Contain(name.Text))
+            if (controller.isSubForumNameTaken(name.Text))
             {
-                MessageBox.Show("name already exists");
-               
+                MessageBox.Show("name already exists");   
             }
             else
             {
-              //  controller.addSubForum(name.Text, Description.Text);// add soon
+                controller.addSubForum(name.Text, Description.Text);
             }
         }
 

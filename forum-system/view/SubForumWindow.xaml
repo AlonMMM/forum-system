@@ -5,21 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:forum_system.model.forum_components"
         mc:Ignorable="d"
-        Title="SubForumWindow" x:Name="UI" Height="300" Width="300">
+        Title="SubForumWindow" x:Name="UI" Height="333.994" Width="370.538">
     <Grid>
-        <Label Content="Guides" Margin="22,0,126,247"></Label>
-        <Label Content="Discussions" Margin="116,-2,32,249"></Label>
-        <ListView x:Name="listViewGuides" Margin="10,25,216,117" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Guides" Margin="22,0,126,237.402"></Label>
+        <Label Content="Discussions" Margin="116,-2,32,239.402"></Label>
+        <ListView x:Name="listViewGuides" Margin="10,25,216,107.402" >
 
 
         </ListView>
 
-        <ListView x:Name="listViewDiscussions" Margin="81,25,0,0" MouseDoubleClick="listView_Discussions_MouseDoubleClick">
+        <ListView x:Name="listViewDiscussions" Margin="100,25,0,0" MouseDoubleClick="listView_Discussions_MouseDoubleClick" Grid.RowSpan="2">
 
 
         </ListView>
-        <Button x:Name="add_topic" Content="Add topic&#xD;&#xA;" HorizontalAlignment="Left" Margin="1,200,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="add_topic_Click"/>
-        <Button Name="addGuide" Content="Add Guide" Height="23" VerticalAlignment="Bottom" Margin="0,0,216,77" Click="Button_Click"></Button>
+        <Button x:Name="add_topic" Content="Add Discussion" HorizontalAlignment="Left" Margin="1,214,0,0" VerticalAlignment="Top" Width="99" Height="20" Click="add_topic_Click"/>
     </Grid>
 
 

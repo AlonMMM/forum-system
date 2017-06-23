@@ -74,5 +74,21 @@ namespace forum_system.view
         {
 
         }
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            textBox_ban_name.Visibility = Visibility.Visible;
+            textBox_ban_name.Text = string.Empty;
+            button_ban.Visibility = Visibility.Visible;
+        }
+
+        private void button_ban_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Ban Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                // not implemented yet
+            }
+        }
     }
 }
