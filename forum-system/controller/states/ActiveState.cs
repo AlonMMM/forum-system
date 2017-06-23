@@ -21,9 +21,14 @@ namespace forum_system.controller.states
             model.startDiscussion(message,subforum);
         }
 
-        public override void addReplytMessage(Message message)
+        public override void addReplytoMessage(Message message)
         {
             model.addCommendaddCommmandtMessage(message);
+        }
+
+        public override bool banMember(string userName)
+        {
+            return model.banMember(userName);
         }
     }
 

@@ -56,12 +56,17 @@ namespace forum_system.model.forum_components
         }
         public void addReplytMessage(Message message)
         {
-             userState.addReplytMessage(message);
+             userState.addReplytoMessage(message);
         }
 
         public string getMemberUserName()
         {
             return user_name;
+        }
+
+        public virtual bool banMember(string userName)
+        {
+            throw new NoPremissionException("Forum Members are not allowed to ban other users");
         }
     }
 }

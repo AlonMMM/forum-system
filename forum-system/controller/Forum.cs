@@ -119,5 +119,9 @@ namespace forum_system.controller
             member.addReplytMessage(message);
         }
 
+        public bool banMember(string userName)
+        {
+            return member.banMember(userName);
+        }
     }
 }

@@ -24,7 +24,12 @@ namespace forum_system.model.forum_components
         public override bool isAdmin()
         {
             return true;
-        } 
+        }
+
+        public override bool banMember(string userName)
+        {
+            return userState.banMember(userName);
+        }
 
     }
 }

@@ -24,8 +24,9 @@ namespace forum_system.model.states
 
         public abstract bool addSubForum(string name, string discription);
 
-        public abstract void addReplytMessage(Message message);
+        public abstract void addReplytoMessage(Message message);
 
+        public abstract bool banMember(string userName);
     }
 
 

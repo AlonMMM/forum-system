@@ -30,6 +30,8 @@ namespace forum_system.controller
         bool isAdminLoggedIn();
 
         void addReplytMessage(Message message);
+
+        bool banMember(string userName);
     }
 
     

@@ -90,5 +90,10 @@ namespace forum_system.model
         {
             return _dbService.addCommmandtMessage(message.Creator, message.Title, message.Content,message.RepliedToId ,message.Date, message.DiscussionId);
         }
+
+        public bool banMember(string userName)
+        {
+            return _dbService.banMember(userName);
+        }
     }
 }

@@ -79,6 +79,21 @@ namespace forum_system.model
 
         }
 
+        public bool banMember(string userName)
+        {
+            bool hasSuccessfulyBanned = true;
+            string query = "UPDATE user_table SET is_banned = True WHERE user_name = '" + userName + "'";
+            try
+            {
+                _dbUtils.update(query);
+            }
+            catch (Exception e)
+            {
+                hasSuccessfulyBanned = false;
+            }
+            return hasSuccessfulyBanned;
+        }
+
         public bool addSubForum(string name, string discription)
         {
             string query = "INSERT INTO sub_forum_table(sub_forum_name, description) VALUES(" + "'" + name + "', " + "'" + discription + "')";

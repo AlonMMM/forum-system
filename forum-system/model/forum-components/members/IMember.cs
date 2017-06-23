@@ -11,10 +11,6 @@ namespace forum_system.model.forum_components
     {
         void startDiscussion(Message message,string subForum);
 
-        //List<Discussion> getAllDiscussions(string subForumName);
-
-        //List<SubForum> getAllSubForums();
-
         void setState(States state);
 
         bool addSubForum(string name, string discription);
@@ -24,5 +20,7 @@ namespace forum_system.model.forum_components
         void addReplytMessage(Message message);
 
         string getMemberUserName();
+
+        bool banMember(string userName);
     }
 }
