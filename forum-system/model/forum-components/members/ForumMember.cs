@@ -48,7 +48,8 @@ namespace forum_system.model.forum_components
 
         public void startDiscussion(Message message, string subForum)
         {
-            userState.startDiscussion(message, user_name, subForum);
+            message.Creator = user_name;
+            userState.startDiscussion(message, subForum);
         }
 
         public virtual bool addSubForum(string name, string discription)
@@ -87,7 +88,10 @@ namespace forum_system.model.forum_components
 
         public void notifyFriends()
         {
-            friends.ForEach(f => f.notificationReceived(user_name));
+            if (friends != null)
+            {
+                friends.ForEach(f => f.notificationReceived(user_name));
+            }
         }
 
         public void notificationReceived(string user_name)

@@ -20,7 +20,7 @@ namespace forum_system.model.states
             model = appliedModel;
         }
 
-        public abstract void startDiscussion(Message message, string userName,string subforum);
+        public abstract void startDiscussion(Message message,string subforum);
 
         public abstract bool addSubForum(string name, string discription);
 

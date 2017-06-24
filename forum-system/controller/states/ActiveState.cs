@@ -15,9 +15,8 @@ namespace forum_system.controller.states
             return model.addSubForum(name, discription);
         }
 
-        public override void startDiscussion(Message message,string creator, string subforum)
+        public override void startDiscussion(Message message, string subforum)
         {
-            message.Creator = creator;
             model.startDiscussion(message,subforum);
         }
 

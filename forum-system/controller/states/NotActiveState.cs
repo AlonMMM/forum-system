@@ -16,7 +16,7 @@ namespace forum_system.controller.states
             throw new NoPremissionException("Normal member cannot add sub-forums");
         }
 
-        public override void startDiscussion(Message message, string creator, string subforum)
+        public override void startDiscussion(Message message, string subforum)
         {
             throw new NoPremissionException("Can't start a discussion while account is not active. Re-activate your account to perform this action");
         }
