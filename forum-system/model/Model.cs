@@ -78,7 +78,14 @@ namespace forum_system.model
                 }
             }
 
-            return allMessages.ElementAt(indexOfRoot);
+            if (allMessages.Count > 0)
+            {
+                return allMessages.ElementAt(indexOfRoot);
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public bool addSubForum(string name, string discription)
@@ -93,7 +100,20 @@ namespace forum_system.model
 
         public bool banMember(string userName)
         {
-            return _dbService.banMember(userName);
+            if (_dbService.doesUserExistAndNotBanned(userName))
+            {
+                return _dbService.banMember(userName);
+            }
+            return false;     
+        }
+
+        public bool unbanMember(string userName)
+        {
+            if (_dbService.doesUserExistAndBanned(userName))
+            {
+                return _dbService.unbanMember(userName);
+            }
+            return false;
         }
     }
 }

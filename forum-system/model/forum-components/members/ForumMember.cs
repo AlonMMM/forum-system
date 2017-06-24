@@ -11,6 +11,7 @@ namespace forum_system.model.forum_components
 {
     public class ForumMember : IMember
     {
+        List<IMember> friends;
         protected UserState userState;
         protected string user_name;
         protected string first_name;
@@ -27,27 +28,38 @@ namespace forum_system.model.forum_components
             userState = new ActiveState();
         }
 
-
-        public void startDiscussion(Message message,string subForum)
+        public ForumMember(string user_name, string first_name, string last_name, string password, bool isBanned)
         {
-            userState.startDiscussion(message, user_name, subForum);
+            this.user_name = user_name;
+            this.first_name = first_name;
+            this.last_name = last_name;
+            this.password = password;
+
+            //set state
+            if (isBanned)
+            {
+                userState = new BannedState();
+            }
+            else
+            {
+                userState = new ActiveState();
+            }
         }
 
-
+        public void startDiscussion(Message message, string subForum)
+        {
+            message.Creator = user_name;
+            userState.startDiscussion(message, subForum);
+        }
 
         public virtual bool addSubForum(string name, string discription)
         {
             throw new NoPremissionException("Normal member cannot add sub-forums");
         }
 
-        public void setState(States state)
+        public void setState(UserState state)
         {
-            if (state == States.ACTIVE)
-                userState = new ActiveState();
-            else if (state == States.BANNED)
-                userState = new BannedState();
-            else if (state == States.NOT_ACTIVE)
-                userState = new NotActiveState();
+            userState = state;
         }
 
         public virtual bool isAdmin()
@@ -56,7 +68,7 @@ namespace forum_system.model.forum_components
         }
         public void addReplytMessage(Message message)
         {
-             userState.addReplytoMessage(message);
+            userState.addReplytoMessage(message);
         }
 
         public string getMemberUserName()
@@ -67,6 +79,24 @@ namespace forum_system.model.forum_components
         public virtual bool banMember(string userName)
         {
             throw new NoPremissionException("Forum Members are not allowed to ban other users");
+        }
+
+        public virtual bool unbanMember(string userName)
+        {
+            throw new NoPremissionException("Forum Members are not allowed to unban other users");
+        }
+
+        public void notifyFriends()
+        {
+            if (friends != null)
+            {
+                friends.ForEach(f => f.notificationReceived(user_name));
+            }
+        }
+
+        public void notificationReceived(string user_name)
+        {
+            
         }
     }
 }

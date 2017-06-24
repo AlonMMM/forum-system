@@ -22,11 +22,10 @@ namespace forum_system.view
     /// </summary>
     public partial class SubForumWindow : Window
     {
-        private IController controller;
-        
-        string subForumName;
-
+        private ObservableCollection<string> discussionsSubjects;
         private List<Discussion> discussionsList;
+        private IController controller;
+        private string subForumName;
 
         public List<Discussion> DiscussionList
         {
@@ -39,16 +38,17 @@ namespace forum_system.view
             InitializeComponent();
             this.controller = controller;
             this.subForumName = subForumName;
-
             discussionsList = controller.getDiscussions(subForumName);
+            discussionsSubjects = controller.getDiscussionsSubjects(subForumName);
+            listViewDiscussions.ItemsSource = discussionsSubjects;
 
-            if (discussionsList != null)
-            {
-                foreach (Discussion item in discussionsList)
-                {
-                    listViewDiscussions.Items.Add(item.OpeningMessage.Title);
-                }
-            }
+            //if (discussionsList != null)
+            //{
+            //    foreach (Discussion item in discussionsList)
+            //    {
+            //        listViewDiscussions.Items.Add(item.OpeningMessage.Title);
+            //    }
+            //}
         }
 
         private void listView_Discussions_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -65,8 +65,14 @@ namespace forum_system.view
 
         private void add_topic_Click(object sender, RoutedEventArgs e)
         {
-            Window addDiscussion = new addDiscussion(subForumName , controller);
+            Window addDiscussion = new addDiscussion(subForumName , controller, discussionsSubjects, this);
             addDiscussion.Show();
+        }
+
+        internal void refreshDiscussions()
+        {
+            discussionsList = controller.getDiscussions(subForumName);
+            controller.notifyFriends();
         }
     }
 

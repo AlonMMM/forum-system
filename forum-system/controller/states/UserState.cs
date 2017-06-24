@@ -20,13 +20,16 @@ namespace forum_system.model.states
             model = appliedModel;
         }
 
-        public abstract void startDiscussion(Message message, string userName,string subforum);
+        public abstract void startDiscussion(Message message,string subforum);
 
         public abstract bool addSubForum(string name, string discription);
 
         public abstract void addReplytoMessage(Message message);
 
         public abstract bool banMember(string userName);
+
+        public abstract bool unbanMember(string userName);
+
     }
 
 

@@ -11,7 +11,7 @@ namespace forum_system.model.forum_components
     {
         void startDiscussion(Message message,string subForum);
 
-        void setState(States state);
+        void setState(UserState state);
 
         bool addSubForum(string name, string discription);
 
@@ -22,5 +22,11 @@ namespace forum_system.model.forum_components
         string getMemberUserName();
 
         bool banMember(string userName);
+
+        bool unbanMember(string userName);
+
+        void notifyFriends();
+
+        void notificationReceived(string userName);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using forum_system.controller;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
+using forum_system.model.exceptions;
 
 namespace forum_system.view
 {
@@ -22,11 +25,20 @@ namespace forum_system.view
     {
         string subForum;
         IController controller;
+        private ObservableCollection<string> discussionsSubjects;
+        private SubForumWindow subForumWindow;
+
         public addDiscussion(string subForum,IController controller)
         {
             InitializeComponent();
             this.subForum = subForum;
             this.controller = controller;
+        }
+
+        public addDiscussion(string subForum, IController controller, ObservableCollection<string> discussionsSubjects, SubForumWindow subForumWindow) : this(subForum, controller)
+        {
+            this.discussionsSubjects = discussionsSubjects;
+            this.subForumWindow = subForumWindow;
         }
 
         private void add_btn_Click(object sender, RoutedEventArgs e)
@@ -42,11 +54,15 @@ namespace forum_system.view
                     string content = contectBox.Text;
                     string title = titleBox.Text;
                     controller.addDiscussion(this.subForum, title, content);
-                    //here need to update the subForum window with the new topic....
+                    discussionsSubjects.Add(title);
+                    subForumWindow.refreshDiscussions();
+                }
+                catch (NoPremissionException exp)
+                {
+                    MessageBox.Show(exp.Message);
                 }
                 catch (Exception)
                 {
-
                     MessageBox.Show("Problem with server accur, please try again later.");
                 }
                 Close();

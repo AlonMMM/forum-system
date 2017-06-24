@@ -22,7 +22,8 @@
 
 
         </ListView>
-        <Button x:Name="add_topic" Content="Add Discussion" HorizontalAlignment="Left" Margin="1,214,0,0" VerticalAlignment="Top" Width="99" Height="20" Click="add_topic_Click"/>
+        <Button x:Name="add_topic" Content="Add Discussion" HorizontalAlignment="Left" Margin="1,214,0,0" VerticalAlignment="Top" Width="99" Height="20"
+                Click="add_topic_Click"/>
     </Grid>
 
 

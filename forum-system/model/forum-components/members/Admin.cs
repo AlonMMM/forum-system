@@ -13,7 +13,6 @@ namespace forum_system.model.forum_components
         public Admin(string user_name, string first_name, string last_name, string password) 
             : base (user_name, first_name, last_name, password)
         {
-            userState = new ActiveState();
         }
 
         public override bool addSubForum(string name, string discription)
@@ -29,6 +28,11 @@ namespace forum_system.model.forum_components
         public override bool banMember(string userName)
         {
             return userState.banMember(userName);
+        }
+
+        public override bool unbanMember(string userName)
+        {
+            return userState.unbanMember(userName);
         }
 
     }
