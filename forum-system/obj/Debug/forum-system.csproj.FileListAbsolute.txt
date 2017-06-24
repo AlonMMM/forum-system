@@ -147,3 +147,5 @@ D:\Git\forum-system\forum-system\obj\Debug\view\AddMessageReply.g.cs
 D:\Git\forum-system\forum-system\obj\Debug\view\AddMessageReply.baml
 C:\projects\school\forum-system\forum-system\obj\Debug\view\AddMessageReply.g.cs
 C:\projects\school\forum-system\forum-system\obj\Debug\view\AddMessageReply.baml
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\AddMessageReply.g.cs
+C:\Users\windows\Source\Repos\forum-system\forum-system\obj\Debug\view\AddMessageReply.baml
