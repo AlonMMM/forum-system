@@ -67,8 +67,9 @@ namespace forum_system.view
                 {
                     discussionWindow.Close();
                     DiscussionWindow dw = new DiscussionWindow(controller, message.DiscussionId);
-                    dw.ShowDialog();
                     Close();
+                    dw.ShowDialog();
+                    
                 }
             }
 

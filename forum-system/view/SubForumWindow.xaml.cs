@@ -53,14 +53,12 @@ namespace forum_system.view
 
         private void listView_Discussions_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            int selectedDiscussion = discussionsList[listViewDiscussions.SelectedIndex].DiscussionID();
-            DiscussionWindow discussionW = new DiscussionWindow(controller, selectedDiscussion);
-            discussionW.ShowDialog();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
+            if (listViewDiscussions.SelectedIndex != -1)
+            {
+                int selectedDiscussion = discussionsList[listViewDiscussions.SelectedIndex].DiscussionID();
+                DiscussionWindow discussionW = new DiscussionWindow(controller, selectedDiscussion);
+                discussionW.ShowDialog();
+            }
         }
 
         private void add_topic_Click(object sender, RoutedEventArgs e)

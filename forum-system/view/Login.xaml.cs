@@ -50,6 +50,7 @@ namespace forum_system.view
                     {
                         MessageBox.Show("Log in successfully");
                         SubForumSelect subForumWindow = new SubForumSelect(controller);
+                        Close();
                         subForumWindow.ShowDialog();
                     }
                     else
