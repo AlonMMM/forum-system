@@ -27,6 +27,9 @@ namespace forum_system.model.states
         public abstract void addReplytoMessage(Message message);
 
         public abstract bool banMember(string userName);
+
+        public abstract bool unbanMember(string userName);
+
     }
 
 

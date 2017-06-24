@@ -1,4 +1,5 @@
 ﻿using forum_system.controller;
+using forum_system.model.exceptions;
 using forum_system.model.forum_components;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,7 @@ namespace forum_system.view
             this.controller = controller;
             changeVisibility(controller.isAdminLoggedIn());
 
-            sub_forum_list = new List<string>();            
+            sub_forum_list = new List<string>();
             foreach (SubForum item in this.controller.getSubForums())
             {
                 sub_forum_list.Add(item.Name);
@@ -41,7 +42,7 @@ namespace forum_system.view
         private void changeVisibility(bool isAdmin)
         {
             if (isAdmin)
-            {           
+            {
                 createNewSubForum.Visibility = Visibility.Visible;
                 textBlock_ban.Visibility = Visibility.Visible;
             }
@@ -64,7 +65,7 @@ namespace forum_system.view
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
-        {                     
+        {
             SubForumWindow subForumWindow = new SubForumWindow(controller, sub_forum_options.Text);
             subForumWindow.ShowDialog();
         }
@@ -85,8 +86,9 @@ namespace forum_system.view
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
             textBox_ban_name.Visibility = Visibility.Visible;
-            textBox_ban_name.Text = string.Empty;
             button_ban.Visibility = Visibility.Visible;
+            button_unban.Visibility = Visibility.Visible;
+            textBox_ban_name.Text = string.Empty;
         }
 
         private void button_ban_Click(object sender, RoutedEventArgs e)
@@ -94,7 +96,30 @@ namespace forum_system.view
             MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Ban Confirmation", System.Windows.MessageBoxButton.YesNo);
             if (messageBoxResult == MessageBoxResult.Yes)
             {
-                controller.banMember(textBox_ban_name.Text);
+                if (controller.banMember(textBox_ban_name.Text))
+                {
+                    MessageBox.Show("Success");
+                }
+                else
+                {
+                    MessageBox.Show("Failed. Maybe this user does not exist or already banned?");
+                }
+            }
+        }
+
+        private void button_unban_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Ban Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                if (controller.unbanMember(textBox_ban_name.Text))
+                {
+                    MessageBox.Show("Success");
+                }
+                else
+                {
+                    MessageBox.Show("Failed. Maybe this user does not exist or not banned?");
+                }
             }
         }
     }

@@ -27,7 +27,7 @@ namespace forum_system.model
             }
             return subForums;
         }
-        
+
         public bool addDiscussion(Discussion discussion)
         {
             bool ans = false;
@@ -42,14 +42,14 @@ namespace forum_system.model
         {
             List<Discussion> discussons = new List<Discussion>();
             //first get all recored that match
-            string query = "SELECT * FROM discussion_table WHERE sub_forum_id = "+"'"+subForumName+"'";
+            string query = "SELECT * FROM discussion_table WHERE sub_forum_id = " + "'" + subForumName + "'";
             OleDbDataReader reader = _dbUtils.select(query);
             while (reader.Read())
             {
                 //now we need to build message from id
                 int messageID = reader.GetInt32(0);
                 Message msg = getMessageByID(messageID);
-                discussons.Add(new Discussion(msg,subForumName));
+                discussons.Add(new Discussion(msg, subForumName));
             }
             return discussons;
         }
@@ -79,25 +79,10 @@ namespace forum_system.model
 
         }
 
-        public bool banMember(string userName)
-        {
-            bool hasSuccessfulyBanned = true;
-            string query = "UPDATE user_table SET is_banned = True WHERE user_name = '" + userName + "'";
-            try
-            {
-                _dbUtils.update(query);
-            }
-            catch (Exception e)
-            {
-                hasSuccessfulyBanned = false;
-            }
-            return hasSuccessfulyBanned;
-        }
-
         public bool addSubForum(string name, string discription)
         {
             string query = "INSERT INTO sub_forum_table(sub_forum_name, description) VALUES(" + "'" + name + "', " + "'" + discription + "')";
-            bool ans =_dbUtils.insert(query);
+            bool ans = _dbUtils.insert(query);
             return ans;
         }
 
@@ -121,20 +106,21 @@ namespace forum_system.model
             return msg;
         }
 
-        public ForumMember login(string username,string passworduser )
+        public ForumMember login(string username, string passworduser)
         {
             ForumMember member = null;
-            string query = "SELECT * FROM user_table WHERE user_name = '" + username+ "' AND password ='" + passworduser + "'";
+            string query = "SELECT * FROM user_table WHERE user_name = '" + username + "' AND password ='" + passworduser + "'";
             OleDbDataReader reader = _dbUtils.select(query);
             while (reader.Read())
             {
-                //now we need to build message from id
+                //build ForumMember
                 string user_name = reader.GetString(0);
                 string first_name = reader.GetString(1);
                 string last_name = reader.GetString(2);
+                bool isBanned = reader.GetBoolean(4);
                 string password = passworduser;
 
-                member = new ForumMember(user_name, first_name, last_name,  password);
+                member = new ForumMember(user_name, first_name, last_name, password, isBanned);
             }
             return member;
         }
@@ -156,15 +142,15 @@ namespace forum_system.model
             }
             return admin;
         }
-         
-        
-       public bool addDiscussionAndMessage(Message msg, string subForum)
+
+
+        public bool addDiscussionAndMessage(Message msg, string subForum)
         {
             string creator_userName = msg.Creator;
             DateTime localDate = DateTime.Now;
             string date = localDate.ToString();
             bool b = true;
-            int id = addFirstMessage(creator_userName, msg.Title, msg.Content, msg.RepliedToId,date);
+            int id = addFirstMessage(creator_userName, msg.Title, msg.Content, msg.RepliedToId, date);
             if (id != -1)
             {
                 addDiscussion(id, subForum);
@@ -200,11 +186,36 @@ namespace forum_system.model
             return _dbUtils.update(query);
         }
 
-        public bool addCommmandtMessage(string creator_userName, string title, string content, int replied_to_id, string date, int discussion_id )
-        {          
-            string query = "INSERT INTO message_table ([creator_userName],[title],[content],[date],[replied_to_id],[discussion_id]) VALUES(" + "'" + creator_userName + "', " + "'" + title + "', '" + content + "','" + date + "',"+ replied_to_id + ","+ discussion_id + ")";
+        public bool addCommmandtMessage(string creator_userName, string title, string content, int replied_to_id, string date, int discussion_id)
+        {
+            string query = "INSERT INTO message_table ([creator_userName],[title],[content],[date],[replied_to_id],[discussion_id]) VALUES(" + "'" + creator_userName + "', " + "'" + title + "', '" + content + "','" + date + "'," + replied_to_id + "," + discussion_id + ")";
             return _dbUtils.insert(query);
-            
+        }
+
+        public bool banMember(string userName)
+        {           
+            string query = "UPDATE user_table SET is_banned = True WHERE user_name = '" + userName + "'";
+            return _dbUtils.update(query);
+        }
+
+        public bool unbanMember(string userName)
+        {
+            string query = "UPDATE user_table SET is_banned = False WHERE user_name = '" + userName + "'";
+            return _dbUtils.update(query);
+        }
+
+        public bool doesUserExistAndBanned(string userName)
+        {
+            string query = "SELECT * FROM user_table WHERE user_name = '" + userName + "' AND is_banned = True";
+            OleDbDataReader reader = _dbUtils.select(query);
+            return reader.HasRows;
+        }
+
+        public bool doesUserExistAndNotBanned(string userName)
+        {
+            string query = "SELECT * FROM user_table WHERE user_name = '" + userName + "' AND is_banned = False";
+            OleDbDataReader reader = _dbUtils.select(query);
+            return reader.HasRows;
         }
 
     }

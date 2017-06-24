@@ -30,6 +30,11 @@ namespace forum_system.controller.states
         {
             return model.banMember(userName);
         }
+
+        public override bool unbanMember(string userName)
+        {
+            return model.unbanMember(userName);
+        }
     }
 
 }

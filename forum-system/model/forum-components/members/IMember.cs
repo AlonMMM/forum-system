@@ -22,5 +22,7 @@ namespace forum_system.model.forum_components
         string getMemberUserName();
 
         bool banMember(string userName);
+
+        bool unbanMember(string userName);
     }
 }

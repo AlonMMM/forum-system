@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Collections;
+using System.Collections.ObjectModel;
 
 namespace forum_system.controller
 {
@@ -32,6 +35,10 @@ namespace forum_system.controller
         void addReplytMessage(Message message);
 
         bool banMember(string userName);
+
+        bool unbanMember(string text);
+
+        ObservableCollection<string> getDiscussionsSubjects(string subForumName);
     }
 
     

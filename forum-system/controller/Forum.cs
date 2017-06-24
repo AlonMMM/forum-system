@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using forum_system.model.forum_components;
 using forum_system.model.exceptions;
+using System.Collections.ObjectModel;
 
 namespace forum_system.controller
 {
@@ -34,6 +35,25 @@ namespace forum_system.controller
             {
                 view.notifyUser(e.Message);
                 return null;              
+            }
+        }
+
+        public ObservableCollection<string> getDiscussionsSubjects(string subForumName)
+        {
+            try
+            {
+                List<Discussion> discussions = model.getAllDiscussions(subForumName);
+                List<string> discussionSubjects = new List<string>();
+                foreach (Discussion d in discussions)
+                {
+                    discussionSubjects.Add(d.OpeningMessage.Title);
+                }
+                return new ObservableCollection<string>(discussionSubjects);
+            }
+            catch (NoPremissionException e)
+            {
+                view.notifyUser(e.Message);
+                return null;
             }
         }
 
@@ -122,6 +142,11 @@ namespace forum_system.controller
         public bool banMember(string userName)
         {
             return member.banMember(userName);
+        }
+
+        public bool unbanMember(string userName)
+        {
+            return member.unbanMember(userName);
         }
     }
 }

@@ -27,8 +27,26 @@ namespace forum_system.model.forum_components
             userState = new ActiveState();
         }
 
+        public ForumMember(string user_name, string first_name, string last_name, string password, bool isBanned)
+        {
+            this.user_name = user_name;
+            this.first_name = first_name;
+            this.last_name = last_name;
+            this.password = password;
 
-        public void startDiscussion(Message message,string subForum)
+            //set state
+            if (isBanned)
+            {
+                userState = new BannedState();
+            }
+            else
+            {
+                userState = new ActiveState();
+            }
+        }
+
+
+        public void startDiscussion(Message message, string subForum)
         {
             userState.startDiscussion(message, user_name, subForum);
         }
@@ -56,7 +74,7 @@ namespace forum_system.model.forum_components
         }
         public void addReplytMessage(Message message)
         {
-             userState.addReplytoMessage(message);
+            userState.addReplytoMessage(message);
         }
 
         public string getMemberUserName()
@@ -67,6 +85,11 @@ namespace forum_system.model.forum_components
         public virtual bool banMember(string userName)
         {
             throw new NoPremissionException("Forum Members are not allowed to ban other users");
+        }
+
+        public virtual bool unbanMember(string userName)
+        {
+            throw new NoPremissionException("Forum Members are not allowed to unban other users");
         }
     }
 }

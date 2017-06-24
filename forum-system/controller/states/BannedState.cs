@@ -18,17 +18,22 @@ namespace forum_system.controller.states
 
         public override void startDiscussion(Message message, string creator, string subforum)
         {
-            view.notifyUser("Can't start a discussion while banned");
+            throw new NoPremissionException("Can't start a discussion while banned");
         }
 
         public override void addReplytoMessage(Message message)
         {
-            view.notifyUser("Cant' reply to messages while banend");
+            throw new NoPremissionException("Cant' reply to messages while banned");
         }
 
         public override bool banMember(string userName)
         {
             throw new NoPremissionException("Can't ban other members while banned");
+        }
+
+        public override bool unbanMember(string userName)
+        {
+            throw new NoPremissionException("Can't unban other members while banned");
         }
     }
 

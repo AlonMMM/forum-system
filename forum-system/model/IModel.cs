@@ -29,5 +29,7 @@ namespace forum_system.model
         bool addCommendaddCommmandtMessage(Message message);
 
         bool banMember(string userName);
+
+        bool unbanMember(string userName);
     }
 }
