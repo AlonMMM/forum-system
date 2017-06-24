@@ -148,5 +148,10 @@ namespace forum_system.controller
         {
             return member.unbanMember(userName);
         }
+
+        public void notifyFriends()
+        {
+            member.notifyFriends();
+        }
     }
 }

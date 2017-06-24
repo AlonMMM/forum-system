@@ -72,6 +72,7 @@ namespace forum_system.view
         internal void refreshDiscussions()
         {
             discussionsList = controller.getDiscussions(subForumName);
+            controller.notifyFriends();
         }
     }
 

@@ -11,6 +11,7 @@ namespace forum_system.model.forum_components
 {
     public class ForumMember : IMember
     {
+        List<IMember> friends;
         protected UserState userState;
         protected string user_name;
         protected string first_name;
@@ -45,27 +46,19 @@ namespace forum_system.model.forum_components
             }
         }
 
-
         public void startDiscussion(Message message, string subForum)
         {
             userState.startDiscussion(message, user_name, subForum);
         }
-
-
 
         public virtual bool addSubForum(string name, string discription)
         {
             throw new NoPremissionException("Normal member cannot add sub-forums");
         }
 
-        public void setState(States state)
+        public void setState(UserState state)
         {
-            if (state == States.ACTIVE)
-                userState = new ActiveState();
-            else if (state == States.BANNED)
-                userState = new BannedState();
-            else if (state == States.NOT_ACTIVE)
-                userState = new NotActiveState();
+            userState = state;
         }
 
         public virtual bool isAdmin()
@@ -90,6 +83,16 @@ namespace forum_system.model.forum_components
         public virtual bool unbanMember(string userName)
         {
             throw new NoPremissionException("Forum Members are not allowed to unban other users");
+        }
+
+        public void notifyFriends()
+        {
+            friends.ForEach(f => f.notificationReceived(user_name));
+        }
+
+        public void notificationReceived(string user_name)
+        {
+            
         }
     }
 }

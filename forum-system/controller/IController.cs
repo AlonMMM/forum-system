@@ -39,6 +39,8 @@ namespace forum_system.controller
         bool unbanMember(string text);
 
         ObservableCollection<string> getDiscussionsSubjects(string subForumName);
+
+        void notifyFriends();
     }
 
     
