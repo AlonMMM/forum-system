@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:forum_system.model.forum_components"
         mc:Ignorable="d"
-        Title="DiscussionWindow" Height="300" Width="1000">
+        Title="DiscussionWindow" Height="750" Width="1000">
     <!--<StackPanel>
         <Label>Title</Label>
         <TextBlock TextWrapping="Wrap" Margin="6,0,10,0">This is a story all about how my life got twisted up and down now take a minute and sit right and i'll tell how bla bla bla</TextBlock>
@@ -15,14 +15,33 @@
         <DockPanel Height="21"  >
             <TextBlock TextAlignment="Right"  DockPanel.Dock="Right" ><Run Text="1.1.2001"/></TextBlock>
         </DockPanel>
-    </StackPanel>-->
+        <DockPanel Height="21"  >
+            <Button HorizontalAlignment="Right" DockPanel.Dock="Right" Content="Comment" Width="74" Click="AddReplyMessage"/>
+        </DockPanel>
     
-    <TreeView Name="MessagesTree" ItemsSource="{Binding}">
+                        
+                        
+    </StackPanel>-->
+    <StackPanel Margin="10">
+        <StackPanel Margin="20">
+        <Label Content="{Binding RootMessage.Title}"></Label>
+        <TextBlock Width="800" TextWrapping="Wrap" Margin="6,0,10,0" Text="{Binding RootMessage.Content}"></TextBlock>
+        <DockPanel   >
+            <TextBlock Text="{Binding RootMessage.Creator}" TextAlignment="Right" DockPanel.Dock="Right" Height="17"></TextBlock>
+        </DockPanel>
+        <DockPanel Height="21"  >
+            <TextBlock TextAlignment="Right"  DockPanel.Dock="Right" Text="{Binding RootMessage.Date}"></TextBlock>
+        </DockPanel>
+        <DockPanel Height="21"  >
+            <Button HorizontalAlignment="Right" DockPanel.Dock="Right" Content="Comment" Width="74" Click="AddReplyToDiscussion" Height="21" VerticalAlignment="Top"/>
+        </DockPanel>
+        </StackPanel>
+        <TreeView Name="MessagesTree" ItemsSource="{Binding}" TreeViewItem.Selected="TreeViewItemSelected" BorderThickness="0">
         
         <TreeView.Resources>
             
             <HierarchicalDataTemplate DataType="{x:Type local:Message}" ItemsSource="{Binding Replies}" >
-                
+                    
                     <StackPanel>
                     
                     <Label Content="{Binding Title}"></Label>
@@ -31,10 +50,15 @@
                         <TextBlock Text="{Binding Creator}" TextAlignment="Right" DockPanel.Dock="Right" Height="17"></TextBlock>
         </DockPanel>
         <DockPanel Height="21"  >
-                        <TextBlock TextAlignment="Right"  DockPanel.Dock="Right" Text="{Binding Date}"></TextBlock>
+                        <TextBlock TextAlignment="Right"  DockPanel.Dock="Right" Text="{Binding Date}"></TextBlock>                        
         </DockPanel>
-    </StackPanel>
+                    <DockPanel Height="21"  >
+            <Button HorizontalAlignment="Right" DockPanel.Dock="Right" Content="Comment" Width="74" Click="AddReplyMessage"/>
+        </DockPanel>
+                        
+                </StackPanel>
             </HierarchicalDataTemplate>
         </TreeView.Resources>
     </TreeView>
+    </StackPanel>
 </Window>

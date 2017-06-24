@@ -28,6 +28,10 @@ namespace forum_system.controller
         void addDiscussion(string subForum, string title, string content);
 
         bool isAdminLoggedIn();
+
+        void addReplytMessage(Message message);
+
+        bool banMember(string userName);
     }
 
     

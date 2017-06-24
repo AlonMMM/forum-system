@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using forum_system.model.states;
 using forum_system.controller.states;
+using forum_system.model.exceptions;
 
 namespace forum_system.model.forum_components
 {
@@ -20,5 +21,11 @@ namespace forum_system.model.forum_components
         {
             return userState.addSubForum(name, discription);
         }
+
+        public override bool banMember(string userName)
+        {
+            throw new NoPremissionException("Forum Guides are not allowed to ban other users");
+        }
+
     }
 }

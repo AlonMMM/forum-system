@@ -41,9 +41,15 @@ namespace forum_system.view
         private void changeVisibility(bool isAdmin)
         {
             if (isAdmin)
+            {           
                 createNewSubForum.Visibility = Visibility.Visible;
+                textBlock_ban.Visibility = Visibility.Visible;
+            }
             else
+            {
                 createNewSubForum.Visibility = Visibility.Hidden;
+                textBlock_ban.Visibility = Visibility.Hidden;
+            }
         }
 
         private void goToForum_Click(object sender, RoutedEventArgs e)
@@ -88,7 +94,7 @@ namespace forum_system.view
             MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Ban Confirmation", System.Windows.MessageBoxButton.YesNo);
             if (messageBoxResult == MessageBoxResult.Yes)
             {
-                // not implemented yet
+                controller.banMember(textBox_ban_name.Text);
             }
         }
     }

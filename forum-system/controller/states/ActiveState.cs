@@ -20,6 +20,16 @@ namespace forum_system.controller.states
             message.Creator = creator;
             model.startDiscussion(message,subforum);
         }
+
+        public override void addReplytoMessage(Message message)
+        {
+            model.addCommendaddCommmandtMessage(message);
+        }
+
+        public override bool banMember(string userName)
+        {
+            return model.banMember(userName);
+        }
     }
 
 }

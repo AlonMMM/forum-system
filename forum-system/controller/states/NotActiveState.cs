@@ -18,7 +18,18 @@ namespace forum_system.controller.states
 
         public override void startDiscussion(Message message, string creator, string subforum)
         {
-            view.notifyUser("Your account is not active. If you with you start a discussion, please re-activate your account.");
+            view.notifyUser("Can't start a discussion while account is not active. Re-activate your account to perform this action");
+        }
+
+        public override void addReplytoMessage(Message message)
+        {
+            view.notifyUser("Can't reply to messages while account is not active. Re-activate your account to perform this action");
+
+        }
+
+        public override bool banMember(string userName)
+        {
+            throw new NoPremissionException("Can't ban other members while account is not active. Re-activate your account to perform this action");
         }
     }
 }

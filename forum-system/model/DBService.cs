@@ -79,6 +79,21 @@ namespace forum_system.model
 
         }
 
+        public bool banMember(string userName)
+        {
+            bool hasSuccessfulyBanned = true;
+            string query = "UPDATE user_table SET is_banned = True WHERE user_name = '" + userName + "'";
+            try
+            {
+                _dbUtils.update(query);
+            }
+            catch (Exception e)
+            {
+                hasSuccessfulyBanned = false;
+            }
+            return hasSuccessfulyBanned;
+        }
+
         public bool addSubForum(string name, string discription)
         {
             string query = "INSERT INTO sub_forum_table(sub_forum_name, description) VALUES(" + "'" + name + "', " + "'" + discription + "')";
@@ -183,6 +198,13 @@ namespace forum_system.model
         {
             string query = " UPDATE message_table SET discussion_id=" + id + " WHERE message_id =" + id;
             return _dbUtils.update(query);
+        }
+
+        public bool addCommmandtMessage(string creator_userName, string title, string content, int replied_to_id, string date, int discussion_id )
+        {          
+            string query = "INSERT INTO message_table ([creator_userName],[title],[content],[date],[replied_to_id],[discussion_id]) VALUES(" + "'" + creator_userName + "', " + "'" + title + "', '" + content + "','" + date + "',"+ replied_to_id + ","+ discussion_id + ")";
+            return _dbUtils.insert(query);
+            
         }
 
     }

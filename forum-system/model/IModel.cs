@@ -26,6 +26,8 @@ namespace forum_system.model
 
         bool addSubForum(string name, string discription);
 
-        
+        bool addCommendaddCommmandtMessage(Message message);
+
+        bool banMember(string userName);
     }
 }
